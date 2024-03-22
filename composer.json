@@ -74,10 +74,7 @@
         "laravel": {
             "providers": [
                 "T73biz\\LwBits\\LwBitsServiceProvider"
-            ],
-            "aliases": {
-                "LwBits": "T73biz\\LwBits\\Facades\\LwBits"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
