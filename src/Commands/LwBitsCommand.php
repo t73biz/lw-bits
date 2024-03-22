@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace T73biz\LwBits\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LwBitsCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'lw-bits';
 
     public $description = 'My command';
 

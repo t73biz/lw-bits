@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace T73biz\LwBits;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use T73biz\LwBits\Commands\LwBitsCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class LwBitsServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('lw-bits')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_lw-bits_table')
+            ->hasCommand(LwBitsCommand::class);
     }
 }
