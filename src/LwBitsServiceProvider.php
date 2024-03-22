@@ -19,7 +19,6 @@ class LwBitsServiceProvider extends PackageServiceProvider
             ->name('lw-bits')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_lw-bits_table')
             ->hasCommand(LwBitsCommand::class);
     }
 }

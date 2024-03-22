@@ -17,20 +17,17 @@ class TestCase extends Orchestra
         );
     }
 
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
             LwBitsServiceProvider::class,
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    public function getEnvironmentSetUp($app): void
     {
         config()->set('database.default', 'testing');
-
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_lw-bits_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_users_table.php';
         $migration->up();
-        */
     }
 }

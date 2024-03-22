@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Facade;
  */
 class LwBits extends Facade
 {
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return \T73biz\LwBits\LwBits::class;
     }

@@ -1,5 +1,7 @@
 <?php
 
 it('can test', function () {
-    expect(true)->toBeTrue();
+    \Pest\Laravel\artisan('lw-bits')
+        ->expectsOutput('All done')
+        ->assertExitCode(0);
 });
