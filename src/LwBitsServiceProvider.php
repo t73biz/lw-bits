@@ -4,7 +4,6 @@ namespace T73biz\LwBits;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use T73biz\LwBits\Commands\LwBitsCommand;
 
 class LwBitsServiceProvider extends PackageServiceProvider
 {
