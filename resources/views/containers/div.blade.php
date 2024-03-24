@@ -1,3 +1,3 @@
-<div>
-{{-- Foo tbol --}}
+<div {!! $globalAttributes !!}>
+    {{ $slot }}
 </div>
