@@ -10,7 +10,7 @@ use Livewire\Features\SupportAttributes\AttributeCollection;
  * Global attributes are attributes common to all HTML elements.
  *
  * @link https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
- * @package T73biz\LwBits\Components
+ *
  * @property string $accessKey
  * @property bool $autoCapitalize
  * @property bool $autoFocus
@@ -143,6 +143,7 @@ trait GlobalAttributesTrait
 
     /**
      * Used to designate an element as a popover element
+     *
      * @link https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
      * AKA: popover attribute
      */
@@ -204,10 +205,10 @@ trait GlobalAttributesTrait
         $this->attributes->each(function ($attribute) use (&$attributeString) {
             if (is_array($attribute)) {
                 foreach ($attribute as $key => $value) {
-                    $attributeString .= $key . '="' . $value . '" ';
+                    $attributeString .= $key.'="'.$value.'" ';
                 }
             } else {
-                $attributeString .= $attribute . ' ';
+                $attributeString .= $attribute.' ';
             }
         });
 
@@ -216,16 +217,16 @@ trait GlobalAttributesTrait
 
     public function setGlobalAttributes(): void
     {
-        if(!empty($this->accessKey)) {
+        if (! empty($this->accessKey)) {
             $this->attributes->add(['accesskey' => $this->accessKey]);
         }
-        if($this->autoCapitalize) {
+        if ($this->autoCapitalize) {
             $this->attributes->add('autocapitalize');
         }
-        if($this->autoFocus) {
+        if ($this->autoFocus) {
             $this->attributes->add('autofocus');
         }
-        if($this->contentEditable) {
+        if ($this->contentEditable) {
             $this->attributes->add('contenteditable');
         }
         if(!empty($this->cssClasses)) {
@@ -233,60 +234,60 @@ trait GlobalAttributesTrait
         }
         if(!empty($this->data)) {
             foreach ($this->data as $datum => $value) {
-                $this->attributes->add(['data-' . $datum => $value]);
+                $this->attributes->add(['data-'.$datum => $value]);
             }
         }
-        if(!empty($this->direction)) {
+        if (! empty($this->direction)) {
             $this->attributes->add(['dir' => $this->direction]);
         }
-        if($this->draggable) {
+        if ($this->draggable) {
             $this->attributes->add('draggable');
         }
-        if(!empty($this->enterKeyHint)) {
+        if (! empty($this->enterKeyHint)) {
             $this->attributes->add(['enterkeyhint' => $this->enterKeyHint]);
         }
-        if($this->hidden) {
+        if ($this->hidden) {
             $this->attributes->add('hidden');
         }
-        if(!empty($this->id)) {
+        if (! empty($this->id)) {
             $this->attributes->add(['id' => $this->id]);
         }
-        if(!empty($this->language)) {
+        if (! empty($this->language)) {
             $this->attributes->add(['lang' => $this->language]);
         }
-        if(!empty($this->nonce)) {
+        if (! empty($this->nonce)) {
             $this->attributes->add(['nonce' => $this->nonce]);
         }
         if(!empty($this->parts)) {
             $this->attributes->add(['part' => implode(' ', $this->parts)]);
         }
-        if(!empty($this->popOver)) {
+        if (! empty($this->popOver)) {
             $this->attributes->add('popover');
         }
-        if(!empty($this->role)) {
+        if (! empty($this->role)) {
             $this->attributes->add(['role' => $this->role]);
         }
-        if(!empty($this->slotAttribute)) {
+        if (! empty($this->slotAttribute)) {
             $this->attributes->add(['slot' => $this->slotAttribute]);
         }
-        if($this->spellCheck) {
+        if ($this->spellCheck) {
             $this->attributes->add('spellcheck');
         }
         if(!empty($this->styles)){
             $styles = [];
             foreach ($this->styles as $property => $style) {
-                $styles[] = $property . ':' . $style;
+                $styles[] = $property.':'.$style;
             }
             $this->attributes->add(['style' => implode(';', $styles)]);
         }
-        if(!empty($this->tabIndex)) {
+        if (! empty($this->tabIndex)) {
             $this->attributes->add(['tabindex' => $this->tabIndex]);
         }
-        if(!empty($this->title)) {
+        if (! empty($this->title)) {
             $this->attributes->add(['title' => $this->title]);
         }
-        if($this->translate) {
-            $this->attributes->add('translate');;
+        if ($this->translate) {
+            $this->attributes->add('translate');
         }
     }
 }
