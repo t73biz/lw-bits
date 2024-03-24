@@ -17,8 +17,6 @@ class LwBitsServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('lw-bits')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasCommand(LwBitsCommand::class);
+            ->hasViews();
     }
 }
