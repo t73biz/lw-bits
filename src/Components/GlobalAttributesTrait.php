@@ -229,10 +229,10 @@ trait GlobalAttributesTrait
         if ($this->contentEditable) {
             $this->attributes->add('contenteditable');
         }
-        if(!empty($this->cssClasses)) {
+        if (! empty($this->cssClasses)) {
             $this->attributes->add(['class' => implode(' ', $this->cssClasses)]);
         }
-        if(!empty($this->data)) {
+        if (! empty($this->data)) {
             foreach ($this->data as $datum => $value) {
                 $this->attributes->add(['data-'.$datum => $value]);
             }
@@ -258,7 +258,7 @@ trait GlobalAttributesTrait
         if (! empty($this->nonce)) {
             $this->attributes->add(['nonce' => $this->nonce]);
         }
-        if(!empty($this->parts)) {
+        if (! empty($this->parts)) {
             $this->attributes->add(['part' => implode(' ', $this->parts)]);
         }
         if (! empty($this->popOver)) {
@@ -273,7 +273,7 @@ trait GlobalAttributesTrait
         if ($this->spellCheck) {
             $this->attributes->add('spellcheck');
         }
-        if(!empty($this->styles)){
+        if (! empty($this->styles)) {
             $styles = [];
             foreach ($this->styles as $property => $style) {
                 $styles[] = $property.':'.$style;
