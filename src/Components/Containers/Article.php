@@ -11,9 +11,9 @@ use Livewire\Component;
 use T73biz\LwBits\Components\GlobalAttributesTrait;
 
 /**
- * Class Div
+ * Class Article
  */
-class Div extends Component
+class Article extends Component
 {
     use GlobalAttributesTrait;
 
@@ -33,7 +33,7 @@ class Div extends Component
     public function render(): Application|ContractedApplication|ContractedView|Factory|View
     {
         return view(
-            'lw-bits::containers.div',
+            'lw-bits::containers.article',
             [
                 'globalAttributes' => $this->getGlobalAttributes(),
                 'slot' => '',
