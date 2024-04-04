@@ -19,7 +19,6 @@ class Div extends Component
 
     /**
      * Standard mount function
-     * @return void
      */
     public function mount(): void
     {
@@ -28,7 +27,6 @@ class Div extends Component
 
     /**
      * Standard render function
-     * @return Application|ContractedApplication|ContractedView|Factory|View
      */
     public function render(): Application|ContractedApplication|ContractedView|Factory|View
     {
