@@ -1,0 +1,3 @@
+<header {!! $globalAttributes !!}>
+    {{ $slot }}
+</header>
