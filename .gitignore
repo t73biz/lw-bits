@@ -9,7 +9,4 @@ phpstan.neon
 testbench.yaml
 vendor
 node_modules
-/create_issues.sh
-/perform_sections.sh
-/generate_section.sh
-/replace_and_create.sh
+/generators/
