@@ -201,8 +201,16 @@ trait GlobalAttributesTrait
 
     public function getGlobalAttributes(): string
     {
+        return $this->parseAttributes($this->attributes);
+    }
+
+    /**
+     * Parses the attributes collection into a string
+     */
+    private function parseAttributes(AttributeCollection $attributes): string
+    {
         $attributeString = '';
-        $this->attributes->each(function ($attribute) use (&$attributeString) {
+        $attributes->each(function ($attribute) use (&$attributeString) {
             if (is_array($attribute)) {
                 foreach ($attribute as $key => $value) {
                     $attributeString .= $key.'="'.$value.'" ';
@@ -215,6 +223,9 @@ trait GlobalAttributesTrait
         return $attributeString;
     }
 
+    /**
+     * Set the global attributes
+     */
     public function setGlobalAttributes(): void
     {
         if (! empty($this->accessKey)) {
