@@ -1,0 +1,3 @@
+<section {!! $globalAttributes !!}>
+    {{ $slot }}
+</section>
