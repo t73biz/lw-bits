@@ -1,0 +1,4 @@
+name: Feature Request
+description: Request a feature for the Package
+title: "[Feature]: "
+labels: ["feature"]
