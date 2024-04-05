@@ -1,6 +1,6 @@
 <?php
 
-namespace T73biz\LwBits\Components\Containers;
+namespace T73biz\LwBits\Components\Sections;
 
 use Illuminate\Contracts\Foundation\Application as ContractedApplication;
 use Illuminate\Contracts\View\Factory;
@@ -31,7 +31,7 @@ class Article extends Component
     public function render(): Application|ContractedApplication|ContractedView|Factory|View
     {
         return view(
-            'lw-bits::containers.article',
+            'lw-bits::sections.article',
             [
                 'globalAttributes' => $this->getGlobalAttributes(),
                 'slot' => '',
