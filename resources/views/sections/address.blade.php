@@ -1,0 +1,3 @@
+<address {!! $globalAttributes !!}>
+    {{ $slot }}
+</address>
