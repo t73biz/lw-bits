@@ -1,0 +1,3 @@
+<search {!! $globalAttributes !!}>
+    {{ $slot }}
+</search>
