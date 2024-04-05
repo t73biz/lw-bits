@@ -1,0 +1,3 @@
+<footer {!! $globalAttributes !!}>
+    {{ $slot }}
+</footer>
