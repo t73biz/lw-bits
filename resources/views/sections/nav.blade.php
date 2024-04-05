@@ -1,0 +1,3 @@
+<nav {!! $globalAttributes !!}>
+    {{ $slot }}
+</nav>
