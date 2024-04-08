@@ -1,0 +1,3 @@
+<dl {!! $globalAttributes !!}>
+    {{ $slot }}
+</dl>
