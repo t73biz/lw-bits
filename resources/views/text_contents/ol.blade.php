@@ -1,3 +1,3 @@
-<ol {!! $globalAttributes !!}>
+<ol {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </ol>

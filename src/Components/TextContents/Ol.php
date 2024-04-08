@@ -8,6 +8,7 @@ use Illuminate\Contracts\View\View as ContractedView;
 use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
+use Livewire\Features\SupportAttributes\AttributeCollection;
 use T73biz\LwBits\Components\GlobalAttributesTrait;
 
 /**
@@ -17,12 +18,33 @@ class Ol extends Component
 {
     use GlobalAttributesTrait;
 
+    public bool $reversed = false;
+
+    public int $start = 1;
+
+    public string $type = '';
+
+    /**
+     * Array of specific attributes for the body element.
+     */
+    private AttributeCollection $specificAttributes;
+
     /**
      * Standard mount function
      */
     public function mount(): void
     {
         $this->setGlobalAttributes();
+        $this->specificAttributes = new AttributeCollection();
+        if ($this->reversed) {
+            $this->specificAttributes->add(['reversed' => 'reversed']);
+        }
+        if ($this->start) {
+            $this->specificAttributes->add(['start' => $this->start]);
+        }
+        if ($this->type) {
+            $this->specificAttributes->add(['type' => $this->type]);
+        }
     }
 
     /**
@@ -34,6 +56,7 @@ class Ol extends Component
             'lw-bits::text_contents.ol',
             [
                 'globalAttributes' => $this->getGlobalAttributes(),
+                'specificAttributes' => $this->parseAttributes($this->specificAttributes),
                 'slot' => '',
             ]
         );
