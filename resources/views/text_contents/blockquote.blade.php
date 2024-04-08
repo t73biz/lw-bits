@@ -1,3 +1,3 @@
-<blockquote {!! $globalAttributes !!}>
+<blockquote {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </blockquote>

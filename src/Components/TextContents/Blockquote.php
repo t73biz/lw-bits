@@ -8,6 +8,7 @@ use Illuminate\Contracts\View\View as ContractedView;
 use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
+use Livewire\Features\SupportAttributes\AttributeCollection;
 use T73biz\LwBits\Components\GlobalAttributesTrait;
 
 /**
@@ -18,11 +19,26 @@ class Blockquote extends Component
     use GlobalAttributesTrait;
 
     /**
+     * A URL that designates a source document or message for the information quoted. This attribute is intended to
+     * point to information explaining the context or the reference for the quote
+     */
+    public string $cite = '';
+
+    /**
+     * Array of specific attributes for the body element.
+     */
+    private AttributeCollection $specificAttributes;
+
+    /**
      * Standard mount function
      */
     public function mount(): void
     {
         $this->setGlobalAttributes();
+        $this->specificAttributes = new AttributeCollection();
+        if ($this->cite) {
+            $this->specificAttributes->add(['cite' => $this->cite]);
+        }
     }
 
     /**
@@ -34,6 +50,7 @@ class Blockquote extends Component
             'lw-bits::text_contents.blockquote',
             [
                 'globalAttributes' => $this->getGlobalAttributes(),
+                'specificAttributes' => $this->parseAttributes($this->specificAttributes),
                 'slot' => '',
             ]
         );

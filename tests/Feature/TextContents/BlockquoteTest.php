@@ -117,3 +117,8 @@ it('can render with translate', function () {
     Livewire::test(MyBlockquote::class, ['translate' => true])
         ->assertSee('translate');
 });
+
+it('can render with cite', function () {
+    Livewire::test(MyBlockquote::class, ['cite' => 'https://www.example.com'])
+        ->assertSee('cite="https://www.example.com"', false);
+});
