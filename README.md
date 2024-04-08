@@ -1,7 +1,7 @@
 # Livewire Bits and Bobs
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/t73biz/lw-bits.svg?style=flat-square)](https://packagist.org/packages/t73biz/lw-bits)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/t73biz/lw-bits/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/t73biz/lw-bits/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![Github Tests Action Status](https://github.com/t73biz/lw-bits/actions/workflows/run-tests.yml/badge.svg)](https://github.com/t73biz/lw-bits/actions/workflows/run-tests.yml)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/t73biz/lw-bits/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/t73biz/lw-bits/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/t73biz/lw-bits.svg?style=flat-square)](https://packagist.org/packages/t73biz/lw-bits)
 
