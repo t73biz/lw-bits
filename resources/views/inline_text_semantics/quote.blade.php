@@ -1,3 +1,3 @@
-<quote {!! $globalAttributes !!}>
+<q {!! $globalAttributes !!}>
     {{ $slot }}
-</quote>
+</q>
