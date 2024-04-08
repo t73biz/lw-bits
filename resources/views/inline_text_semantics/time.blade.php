@@ -1,0 +1,3 @@
+<time {!! $globalAttributes !!}>
+    {{ $slot }}
+</time>
