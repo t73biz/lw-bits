@@ -117,3 +117,8 @@ it('can render with translate', function () {
     Livewire::test(MyLi::class, ['translate' => true])
         ->assertSee('translate');
 });
+
+it('can render with value', function () {
+    Livewire::test(MyLi::class, ['value' => 1])
+        ->assertSee('value="1"', false);
+});

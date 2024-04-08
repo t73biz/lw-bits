@@ -1,3 +1,3 @@
-<li {!! $globalAttributes !!}>
+<li {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </li>
