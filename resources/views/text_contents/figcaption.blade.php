@@ -1,0 +1,3 @@
+<figcaption {!! $globalAttributes !!}>
+    {{ $slot }}
+</figcaption>

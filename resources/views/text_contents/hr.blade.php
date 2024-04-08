@@ -1,0 +1,3 @@
+<hr {!! $globalAttributes !!}>
+    {{ $slot }}
+</hr>

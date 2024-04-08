@@ -1,0 +1,3 @@
+<dd {!! $globalAttributes !!}>
+    {{ $slot }}
+</dd>
