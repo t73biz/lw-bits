@@ -1,0 +1,3 @@
+<kbd {!! $globalAttributes !!}>
+    {{ $slot }}
+</kbd>
