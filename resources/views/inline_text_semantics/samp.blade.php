@@ -1,0 +1,3 @@
+<samp {!! $globalAttributes !!}>
+    {{ $slot }}
+</samp>
