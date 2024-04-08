@@ -1,0 +1,3 @@
+<code {!! $globalAttributes !!}>
+    {{ $slot }}
+</code>
