@@ -1,3 +1,3 @@
-<data {!! $globalAttributes !!}>
+<data {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </data>
