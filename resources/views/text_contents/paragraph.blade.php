@@ -1,0 +1,3 @@
+<paragraph {!! $globalAttributes !!}>
+    {{ $slot }}
+</paragraph>
