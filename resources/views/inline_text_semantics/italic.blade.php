@@ -1,3 +1,3 @@
-<italic {!! $globalAttributes !!}>
+<i {!! $globalAttributes !!}>
     {{ $slot }}
-</italic>
+</i>
