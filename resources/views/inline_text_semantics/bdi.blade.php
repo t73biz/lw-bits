@@ -1,0 +1,3 @@
+<bdi {!! $globalAttributes !!}>
+    {{ $slot }}
+</bdi>
