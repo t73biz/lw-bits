@@ -8,6 +8,7 @@ use Illuminate\Contracts\View\View as ContractedView;
 use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
+use Livewire\Features\SupportAttributes\AttributeCollection;
 use T73biz\LwBits\Components\GlobalAttributesTrait;
 
 /**
@@ -17,12 +18,23 @@ class Time extends Component
 {
     use GlobalAttributesTrait;
 
+    private AttributeCollection $specificAttributes;
+
+    /**
+     * A valid date string
+     */
+    public string $dateTime = '';
+
     /**
      * Standard mount function
      */
     public function mount(): void
     {
         $this->setGlobalAttributes();
+        $this->specificAttributes = new AttributeCollection();
+        if (! empty($this->dateTime)) {
+            $this->specificAttributes->add(['datetime' => $this->dateTime]);
+        }
     }
 
     /**
@@ -34,6 +46,7 @@ class Time extends Component
             'lw-bits::inline_text_semantics.time',
             [
                 'globalAttributes' => $this->getGlobalAttributes(),
+                'specificAttributes' => $this->parseAttributes($this->specificAttributes),
                 'slot' => '',
             ]
         );

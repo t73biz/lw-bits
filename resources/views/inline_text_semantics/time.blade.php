@@ -1,3 +1,3 @@
-<time {!! $globalAttributes !!}>
+<time {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </time>
