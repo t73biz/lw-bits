@@ -1,0 +1,3 @@
+<ol {!! $globalAttributes !!}>
+    {{ $slot }}
+</ol>
