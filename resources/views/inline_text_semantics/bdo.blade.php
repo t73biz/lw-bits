@@ -1,0 +1,3 @@
+<bdo {!! $globalAttributes !!}>
+    {{ $slot }}
+</bdo>
