@@ -1,0 +1,3 @@
+<ruby {!! $globalAttributes !!}>
+    {{ $slot }}
+</ruby>
