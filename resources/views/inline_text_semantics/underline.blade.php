@@ -1,3 +1,3 @@
-<underline {!! $globalAttributes !!}>
+<u {!! $globalAttributes !!}>
     {{ $slot }}
-</underline>
+</u>
