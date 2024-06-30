@@ -4,6 +4,4 @@ namespace T73biz\LwBits\Tests\TestSupport\Components\InlineTextSemantics;
 
 use T73biz\LwBits\Components\InlineTextSemantics\Rt;
 
-class MyRt extends Rt
-{
-}
+class MyRt extends Rt {}

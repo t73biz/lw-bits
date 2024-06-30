@@ -4,6 +4,4 @@ namespace T73biz\LwBits\Tests\TestSupport\Components\InlineTextSemantics;
 
 use T73biz\LwBits\Components\InlineTextSemantics\Underline;
 
-class MyUnderline extends Underline
-{
-}
+class MyUnderline extends Underline {}
