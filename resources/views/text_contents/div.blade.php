@@ -1,3 +1,3 @@
 <div {!! $globalAttributes !!}>
-    {{ $slot }}
+    {!! $slot !!}
 </div>

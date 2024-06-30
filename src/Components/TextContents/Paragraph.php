@@ -34,7 +34,7 @@ class Paragraph extends Component
             'lw-bits::text_contents.paragraph',
             [
                 'globalAttributes' => $this->getGlobalAttributes(),
-                'slot' => '',
+                'slot' => $this->slot,
             ]
         );
     }

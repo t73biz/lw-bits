@@ -26,6 +26,7 @@ use Livewire\Features\SupportAttributes\AttributeCollection;
  * @property string $nonce
  * @property array $parts
  * @property string $role
+ * @property mixed $slot
  * @property string $slotAttribute
  * @property bool $spellCheck
  * @property array $styles
@@ -158,9 +159,9 @@ trait GlobalAttributesTrait
     public string $role = '';
 
     /**
-     * This is the content slot of an element. It is used to define the slot where the content of the element will be.
+     * Assigns the slot info for a component
      */
-    public string $slot = '';
+    public $slot;
 
     /**
      * Assigns a slot in a shadow DOM shadow tree to an element: An element with a slot attribute is assigned to the
@@ -228,6 +229,7 @@ trait GlobalAttributesTrait
      */
     public function setGlobalAttributes(): void
     {
+        $this->attributes = new AttributeCollection();
         if (! empty($this->accessKey)) {
             $this->attributes->add(['accesskey' => $this->accessKey]);
         }
