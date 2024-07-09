@@ -1,0 +1,3 @@
+<link {!! $globalAttributes !!}>
+    {{ $slot }}
+</link>
