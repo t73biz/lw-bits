@@ -1,3 +1,3 @@
-<meta {!! $globalAttributes !!}>
+<meta {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </meta>
