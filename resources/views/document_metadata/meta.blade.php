@@ -1,0 +1,3 @@
+<meta {!! $globalAttributes !!}>
+    {{ $slot }}
+</meta>
