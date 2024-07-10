@@ -52,7 +52,7 @@ class Meta extends Component
     public string $name = '';
 
     /**
-     * Array of specific attributes for the body element.
+     * Array of specific attributes for the meta element.
      */
     private AttributeCollection $specificAttributes;
 
