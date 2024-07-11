@@ -18,8 +18,6 @@ class Anchor extends Component
 {
     use GlobalAttributesTrait;
 
-    private AttributeCollection $specificAttributes;
-
     /**
      * Causes the browser to treat the linked URL as a download. Can be used with or without a filename value:
      */
@@ -86,6 +84,12 @@ class Anchor extends Component
      * Hints at the linked URL's format with a MIME type. No built-in functionality.
      */
     public string $type = '';
+
+    /**
+     * @var \Livewire\Features\SupportAttributes\AttributeCollection
+     *                                                               The specific attributes for the anchor <a> element
+     */
+    private AttributeCollection $specificAttributes;
 
     /**
      * Standard mount function
