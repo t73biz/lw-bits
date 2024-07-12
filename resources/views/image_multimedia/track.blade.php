@@ -1,0 +1,3 @@
+<track {!! $globalAttributes !!}>
+    {{ $slot }}
+</track>
