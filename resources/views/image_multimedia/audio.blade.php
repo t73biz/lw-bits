@@ -1,0 +1,3 @@
+<audio {!! $globalAttributes !!}>
+    {{ $slot }}
+</audio>
