@@ -1,0 +1,3 @@
+<map {!! $globalAttributes !!}>
+    {{ $slot }}
+</map>
