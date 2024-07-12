@@ -2,3 +2,22 @@ name: Feature Request
 description: Request a feature for the Package
 title: "[Feature]: "
 labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request a new Feature for the Package. Please provide as much detail as possible.
+  - type: textarea
+    id: description
+    attributes:
+      label: Full feature description
+      description: Please provide as much detail as possible
+    validations:
+      required: true
+  - type: textarea
+    id: cos
+    attributes:
+      label: Conditions of Satisfaction
+      description: What are the conditions that need to be met for this feature to be considered complete?
+    validations:
+      required: true

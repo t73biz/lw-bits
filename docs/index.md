@@ -6,7 +6,6 @@ Livewire Bits is a collection of Livewire components that you can use in your La
 The components are designed to be simple, easy to use, and customizable. There is a set of HTML5 components that are the
 core of the package.
 
-
 ## Installation
 
 You can install the package via composer:
@@ -46,3 +45,5 @@ echo $lwBits->echoPhrase('Hello, T73biz!');
 ```bash
 composer test
 ```
+## HTML5 Components
+[HTML5 Components](html5-components.md)

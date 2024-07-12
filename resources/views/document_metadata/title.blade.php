@@ -1,0 +1,3 @@
+<title {!! $globalAttributes !!}>
+    {{ $slot }}
+</title>
