@@ -23,20 +23,23 @@ body:
           placeholder: When I do X I see Y.
       validations:
           required: true
-    - type: input
+    - type: dropdown
       id: package-version
       attributes:
-          label: Package Version
-          description: What version of our Package are you running? Please be as specific as possible
-          placeholder: 2.0.0
-      validations:
-          required: true
+        label: Package Version
+        description: What version of our Package are you running?
+        options:
+          - 1.0.0
+          - 0.3.0
+          - 0.2.0
+          - 0.1.0
+          - dev-main
     - type: input
       id: php-version
       attributes:
           label: PHP Version
           description: What version of PHP are you running? Please be as specific as possible
-          placeholder: 8.2.0
+          placeholder: 8.3.0
       validations:
           required: true
     - type: input
@@ -44,7 +47,7 @@ body:
       attributes:
         label: Laravel Version
         description: What version of Laravel are you running? Please be as specific as possible
-        placeholder: 9.0.0
+        placeholder: 11.0.0
       validations:
         required: true
     - type: dropdown
