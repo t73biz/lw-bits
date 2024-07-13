@@ -1,3 +1,3 @@
-<area {!! $globalAttributes !!}>
+<area {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </area>
