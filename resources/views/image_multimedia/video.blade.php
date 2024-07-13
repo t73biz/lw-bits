@@ -1,3 +1,3 @@
-<video {!! $globalAttributes !!}>
+<video {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </video>
