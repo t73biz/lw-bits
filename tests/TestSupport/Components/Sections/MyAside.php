@@ -4,4 +4,6 @@ namespace T73biz\LwBits\Tests\TestSupport\Components\Sections;
 
 use T73biz\LwBits\Components\Sections\Aside;
 
-class MyAside extends Aside {}
+class MyAside extends Aside
+{
+}
