@@ -2,6 +2,4 @@
 
 namespace T73biz\LwBits\Exceptions;
 
-class InvalidAttributeException extends \Exception
-{
-}
+class InvalidAttributeException extends \Exception {}
