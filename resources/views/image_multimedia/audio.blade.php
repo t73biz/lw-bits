@@ -1,3 +1,3 @@
-<audio {!! $globalAttributes !!}>
+<audio {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </audio>
