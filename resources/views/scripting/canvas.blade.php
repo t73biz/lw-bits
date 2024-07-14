@@ -1,0 +1,3 @@
+<canvas {!! $globalAttributes !!}>
+    {{ $slot }}
+</canvas>
