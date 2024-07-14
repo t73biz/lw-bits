@@ -117,3 +117,13 @@ it('can render with translate', function () {
     Livewire::test(MyDetails::class, ['translate' => true])
         ->assertSee('translate');
 });
+
+it('can render with open', function () {
+    Livewire::test(MyDetails::class, ['open' => true])
+        ->assertSee('open');
+});
+
+it('can render with name', function () {
+    Livewire::test(MyDetails::class, ['name' => 'main-details'])
+        ->assertSee('name="main-details"', false);
+});
