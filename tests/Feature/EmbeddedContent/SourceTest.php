@@ -117,3 +117,38 @@ it('can render with translate', function () {
     Livewire::test(MySource::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
+
+it('can render with height', function () {
+    Livewire::test(MySource::class, ['height' => 100])
+        ->assertSee('height="100"', false);
+});
+
+it('can render with media', function () {
+    Livewire::test(MySource::class, ['media' => 'screen and (min-width: 600px)'])
+        ->assertSee('media="screen and (min-width: 600px)"', false);
+});
+
+it('can render with sizes', function () {
+    Livewire::test(MySource::class, ['sizes' => '100vw'])
+        ->assertSee('sizes="100vw"', false);
+});
+
+it('can render with src', function () {
+    Livewire::test(MySource::class, ['src' => 'https://example.com'])
+        ->assertSee('src="https://example.com"', false);
+});
+
+it('can render with srcset', function () {
+    Livewire::test(MySource::class, ['srcset' => 'https://example.com 1x, https://example.com 2x'])
+        ->assertSee('srcset="https://example.com 1x, https://example.com 2x"', false);
+});
+
+it('can render with type', function () {
+    Livewire::test(MySource::class, ['type' => 'image/jpeg'])
+        ->assertSee('type="image/jpeg"', false);
+});
+
+it('can render with width', function () {
+    Livewire::test(MySource::class, ['width' => 100])
+        ->assertSee('width="100"', false);
+});

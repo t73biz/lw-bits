@@ -117,3 +117,13 @@ it('can render with translate', function () {
     Livewire::test(MyPortal::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
+
+it('can render with src', function () {
+    Livewire::test(MyPortal::class, ['src' => 'https://www.example.com'])
+        ->assertSee('src="https://www.example.com"', false);
+});
+
+it('can render with referrerpolicy', function () {
+    Livewire::test(MyPortal::class, ['referrerpolicy' => 'no-referrer'])
+        ->assertSee('referrerpolicy="no-referrer"', false);
+});
