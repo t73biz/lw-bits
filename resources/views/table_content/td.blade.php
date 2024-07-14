@@ -1,0 +1,3 @@
+<td {!! $globalAttributes !!}>
+    {{ $slot }}
+</td>
