@@ -1,0 +1,3 @@
+<tfoot {!! $globalAttributes !!}>
+    {{ $slot }}
+</tfoot>
