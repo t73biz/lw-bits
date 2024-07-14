@@ -1,3 +1,3 @@
-<track {!! $globalAttributes !!}>
+<track {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </track>
