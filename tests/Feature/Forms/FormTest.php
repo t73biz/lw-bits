@@ -117,3 +117,38 @@ it('can render with translate', function () {
     Livewire::test(MyForm::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
+
+it('can render with action', function () {
+    Livewire::test(MyForm::class, ['action' => 'https://example.com'])
+        ->assertSee('action="https://example.com"', false);
+});
+
+it('can render with enctype', function () {
+    Livewire::test(MyForm::class, ['enctype' => 'multipart/form-data', 'method' => 'post'])
+        ->assertSee('enctype="multipart/form-data"', false);
+});
+
+it('can render with method', function () {
+    Livewire::test(MyForm::class, ['method' => 'post'])
+        ->assertSee('method="post"', false);
+});
+
+it('can render with name', function () {
+    Livewire::test(MyForm::class, ['name' => 'main-form'])
+        ->assertSee('name="main-form"', false);
+});
+
+it('can render with novalidate', function () {
+    Livewire::test(MyForm::class, ['noValidate' => true])
+        ->assertSee('novalidate');
+});
+
+it('can render with rel', function () {
+    Livewire::test(MyForm::class, ['rel' => 'main-form'])
+        ->assertSee('rel="main-form"', false);
+});
+
+it('can render with target', function () {
+    Livewire::test(MyForm::class, ['target' => '_blank'])
+        ->assertSee('target="_blank"', false);
+});

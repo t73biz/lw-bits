@@ -19,6 +19,27 @@ class Output extends Component
     use GlobalAttributesTrait;
 
     /**
+     * A space-separated list of other elements' ids, indicating that those elements contributed
+     * input values to (or otherwise affected) the calculation.
+     */
+    public string $for = '';
+
+    /**
+     * The <form> element to associate the output with (its form owner). The value of this attribute must
+     * be the id of a <form> in the same document. (If this attribute is not set, the <output> is
+     * associated with its ancestor <form> element, if any.) This attribute lets you associate
+     * <output> elements to <form>s anywhere in the document, not just inside a <form>.
+     * It can also override an ancestor <form> element.
+     */
+    public string $form = '';
+
+    /**
+     * The element's name. Used in the form.elements API. The <output> value, name, and contents are
+     * NOT submitted during form submission.
+     */
+    public string $name = '';
+
+    /**
      * The specific attributes for the embed component
      */
     private AttributeCollection $specificAttributes;
@@ -32,6 +53,15 @@ class Output extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
+        if (! empty($this->for)) {
+            $this->specificAttributes->add(['for' => $this->for]);
+        }
+        if (! empty($this->form)) {
+            $this->specificAttributes->add(['form' => $this->form]);
+        }
+        if (! empty($this->name)) {
+            $this->specificAttributes->add(['name' => $this->name]);
+        }
     }
 
     /**

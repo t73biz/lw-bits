@@ -117,3 +117,18 @@ it('can render with translate', function () {
     Livewire::test(MyFieldset::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
+
+it('can render with disabled', function () {
+    Livewire::test(MyFieldset::class, ['disabled' => true])
+        ->assertSee('disabled');
+});
+
+it('can render with form', function () {
+    Livewire::test(MyFieldset::class, ['form' => 'main-form'])
+        ->assertSee('form="main-form"', false);
+});
+
+it('can render with name', function () {
+    Livewire::test(MyFieldset::class, ['name' => 'main-fieldset'])
+        ->assertSee('name="main-fieldset"', false);
+});

@@ -117,3 +117,38 @@ it('can render with translate', function () {
     Livewire::test(MyMeter::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
+
+it('can render with high', function () {
+    Livewire::test(MyMeter::class, ['high' => 2])
+        ->assertSee('high="2"', false);
+});
+
+it('can render with low', function () {
+    Livewire::test(MyMeter::class, ['low' => 4])
+        ->assertSee('low="4"', false);
+});
+
+it('can render with max', function () {
+    Livewire::test(MyMeter::class, ['max' => 2])
+        ->assertSee('max="2"', false);
+});
+
+it('can render with min', function () {
+    Livewire::test(MyMeter::class, ['min' => 1])
+        ->assertSee('min="1"', false);
+});
+
+it('can render with optimum', function () {
+    Livewire::test(MyMeter::class, ['optimum' => 2])
+        ->assertSee('optimum="2"', false);
+});
+
+it('can render with value', function () {
+    Livewire::test(MyMeter::class, ['value' => 3])
+        ->assertSee('value="3"', false);
+});
+
+it('can render with form', function () {
+    Livewire::test(MyMeter::class, ['form' => 'main-form'])
+        ->assertSee('form="main-form"', false);
+});

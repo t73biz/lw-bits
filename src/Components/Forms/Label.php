@@ -19,6 +19,12 @@ class Label extends Component
     use GlobalAttributesTrait;
 
     /**
+     * The value of the for attribute must be a single id for a labelable form-related element in the same document as
+     * the <label> element. So, any given label element can be associated with only one form control.
+     */
+    public string $for = '';
+
+    /**
      * The specific attributes for the embed component
      */
     private AttributeCollection $specificAttributes;
@@ -32,6 +38,9 @@ class Label extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
+        if (! empty($this->for)) {
+            $this->specificAttributes->add(['for' => $this->for]);
+        }
     }
 
     /**

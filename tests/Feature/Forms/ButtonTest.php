@@ -117,3 +117,83 @@ it('can render with translate', function () {
     Livewire::test(MyButton::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
+
+it('can render with disabled', function () {
+    Livewire::test(MyButton::class, ['disabled' => true])
+        ->assertSee('disabled');
+});
+
+it('can render with form', function () {
+    Livewire::test(MyButton::class, ['form' => 'main-form'])
+        ->assertSee('form="main-form"', false);
+});
+
+it('can render with formaction', function () {
+    Livewire::test(
+        MyButton::class,
+        [
+            'formaction' => 'submit-form',
+            'form' => 'main-form',
+            'type' => 'submit',
+        ]
+    )->assertSee('formaction="submit-form"', false);
+});
+
+it('can render with formenctype', function () {
+    Livewire::test(
+        MyButton::class,
+        [
+            'formenctype' => 'application/x-www-form-urlencoded',
+            'form' => 'main-form',
+            'type' => 'submit',
+        ]
+    )->assertSee('formenctype="application/x-www-form-urlencoded"', false);
+});
+
+it('can render with formmethod', function () {
+    Livewire::test(
+        MyButton::class,
+        [
+            'formmethod' => 'post',
+            'form' => 'main-form',
+            'type' => 'submit',
+        ]
+    )->assertSee('formmethod="post"', false);
+});
+
+it('can render with formnovalidate', function () {
+    Livewire::test(
+        MyButton::class,
+        [
+            'formnovalidate' => true,
+            'form' => 'main-form',
+            'type' => 'submit',
+        ]
+    )->assertSee('formnovalidate');
+});
+
+it('can render with formtarget', function () {
+    Livewire::test(
+        MyButton::class,
+        [
+            'formtarget' => '_blank',
+            'form' => 'main-form',
+            'type' => 'submit',
+        ]
+    )->assertSee('formtarget="_blank"', false);
+});
+
+it('can render with name', function () {
+    Livewire::test(MyButton::class, ['name' => 'main-button'])
+        ->assertSee('name="main-button"', false);
+});
+
+it('can render with type', function () {
+    Livewire::test(MyButton::class, ['type' => 'submit'])
+        ->assertSee('type="submit"', false);
+});
+
+it('can render with value', function () {
+    Livewire::test(MyButton::class, ['name' => 'foo', 'value' => 'main-button'])
+        ->assertSee('value="main-button"', false);
+});

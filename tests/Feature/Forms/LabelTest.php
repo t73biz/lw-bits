@@ -117,3 +117,8 @@ it('can render with translate', function () {
     Livewire::test(MyLabel::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
+
+it('can render with for', function () {
+    Livewire::test(MyLabel::class, ['for' => 'main-label'])
+        ->assertSee('for="main-label"', false);
+});
