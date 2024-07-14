@@ -1,3 +1,3 @@
-<ins {!! $globalAttributes !!}>
+<ins {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </ins>

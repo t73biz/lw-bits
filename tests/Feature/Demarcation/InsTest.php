@@ -117,3 +117,15 @@ it('can render with translate', function () {
     Livewire::test(MyIns::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
+
+it('can render with cite', function () {
+    Livewire::test(MyIns::class, ['cite' => 'https://example.com'])
+        ->assertSee('cite="https://example.com"', false);
+});
+
+it('can render with datetime', function () {
+    $date = new \Carbon\Carbon();
+    $dateNow = $date->now();
+    Livewire::test(MyIns::class, ['datetime' => $dateNow])
+        ->assertSee('datetime="'.$dateNow->toDateTimeLocalString().'"', false);
+});
