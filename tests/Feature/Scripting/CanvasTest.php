@@ -117,3 +117,13 @@ it('can render with translate', function () {
     Livewire::test(MyCanvas::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
+
+it('can render with height', function () {
+    Livewire::test(MyCanvas::class, ['height' => 100])
+        ->assertSee('height="100"', false);
+});
+
+it('can render with width', function () {
+    Livewire::test(MyCanvas::class, ['width' => 200])
+        ->assertSee('width="200"', false);
+});

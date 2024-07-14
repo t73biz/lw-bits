@@ -1,3 +1,3 @@
-<script {!! $globalAttributes !!}>
+<script {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </script>
