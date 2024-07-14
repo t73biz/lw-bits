@@ -1,3 +1,3 @@
-<dialog {!! $globalAttributes !!}>
+<dialog {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </dialog>

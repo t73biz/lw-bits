@@ -103,11 +103,6 @@ it('can render with styles', function () {
         ->assertSee('style="color:red;font-size:16px"', false);
 });
 
-it('can render with tabindex', function () {
-    Livewire::test(MyDialog::class, ['tabIndex' => 1])
-        ->assertSee('tabindex="1"', false);
-});
-
 it('can render with title', function () {
     Livewire::test(MyDialog::class, ['title' => 'main-dialog'])
         ->assertSee('title="main-dialog"', false);
@@ -117,3 +112,12 @@ it('can render with translate', function () {
     Livewire::test(MyDialog::class, ['translate' => true])
         ->assertSee('translate');
 });
+
+it('can render with open', function () {
+    Livewire::test(MyDialog::class, ['open' => true])
+        ->assertSee('open');
+});
+
+it('throws an exception if the tabindex is set', function () {
+    Livewire::test(MyDialog::class, ['open' => true, 'tabIndex' => 1]);
+})->throws(\Illuminate\View\ViewException::class, 'A dialog element should not have a tabindex attribute');
