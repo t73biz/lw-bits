@@ -1,3 +1,3 @@
-<img {!! $globalAttributes !!}>
+<img {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </img>
