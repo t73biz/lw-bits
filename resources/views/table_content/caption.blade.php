@@ -1,0 +1,3 @@
+<caption {!! $globalAttributes !!}>
+    {{ $slot }}
+</caption>
