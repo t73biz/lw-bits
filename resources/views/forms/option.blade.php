@@ -1,0 +1,3 @@
+<option {!! $globalAttributes !!}>
+    {{ $slot }}
+</option>
