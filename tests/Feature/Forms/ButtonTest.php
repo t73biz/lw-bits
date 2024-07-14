@@ -9,22 +9,22 @@ it('can render', function () {
 });
 
 it('can render with accesskey', function () {
-    Livewire::test(MyButton::class, ['accessKey' => true])
+    Livewire::test(MyButton::class, ['accesskey' => true])
         ->assertSee('accesskey');
 });
 
 it('can render with autocapitalize', function () {
-    Livewire::test(MyButton::class, ['autoCapitalize' => true])
+    Livewire::test(MyButton::class, ['autocapitalize' => true])
         ->assertSee('autocapitalize');
 });
 
 it('can render with autofocus', function () {
-    Livewire::test(MyButton::class, ['autoFocus' => true])
+    Livewire::test(MyButton::class, ['autofocus' => true])
         ->assertSee('autofocus');
 });
 
 it('can render with contenteditable', function () {
-    Livewire::test(MyButton::class, ['contentEditable' => true])
+    Livewire::test(MyButton::class, ['contenteditable' => true])
         ->assertSee('contenteditable');
 });
 
@@ -44,12 +44,12 @@ it('can render with dir', function () {
 });
 
 it('can render with draggable', function () {
-    Livewire::test(MyButton::class, ['draggable' => true])
+    Livewire::test(MyButton::class, ['draggable' => 'true'])
         ->assertSee('draggable');
 });
 
 it('can render with enterkeyhint', function () {
-    Livewire::test(MyButton::class, ['enterKeyHint' => 'enter'])
+    Livewire::test(MyButton::class, ['enterkeyhint' => 'enter'])
         ->assertSee('enterkeyhint="enter"', false);
 });
 
@@ -79,7 +79,7 @@ it('can render with parts', function () {
 });
 
 it('can render with popOver', function () {
-    Livewire::test(MyButton::class, ['popOver' => true])
+    Livewire::test(MyButton::class, ['popover' => true])
         ->assertSee('popover');
 });
 
@@ -94,7 +94,7 @@ it('can render with slot', function () {
 });
 
 it('can render with spellcheck', function () {
-    Livewire::test(MyButton::class, ['spellCheck' => true])
+    Livewire::test(MyButton::class, ['spellcheck' => 'true'])
         ->assertSee('spellcheck');
 });
 
@@ -104,7 +104,7 @@ it('can render with styles', function () {
 });
 
 it('can render with tabindex', function () {
-    Livewire::test(MyButton::class, ['tabIndex' => 1])
+    Livewire::test(MyButton::class, ['tabindex' => 1])
         ->assertSee('tabindex="1"', false);
 });
 
@@ -114,6 +114,6 @@ it('can render with title', function () {
 });
 
 it('can render with translate', function () {
-    Livewire::test(MyButton::class, ['translate' => true])
+    Livewire::test(MyButton::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });

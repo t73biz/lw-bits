@@ -43,7 +43,7 @@ class Dialog extends Component
         if ($this->open) {
             $this->specificAttributes->add(['open']);
         }
-        if (! empty($this->tabIndex)) {
+        if (! empty($this->tabindex)) {
             throw new InvalidAttributeException('A dialog element should not have a tabindex attribute');
         }
     }

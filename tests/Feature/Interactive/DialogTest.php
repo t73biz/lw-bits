@@ -9,22 +9,22 @@ it('can render', function () {
 });
 
 it('can render with accesskey', function () {
-    Livewire::test(MyDialog::class, ['accessKey' => true])
+    Livewire::test(MyDialog::class, ['accesskey' => true])
         ->assertSee('accesskey');
 });
 
 it('can render with autocapitalize', function () {
-    Livewire::test(MyDialog::class, ['autoCapitalize' => true])
+    Livewire::test(MyDialog::class, ['autocapitalize' => true])
         ->assertSee('autocapitalize');
 });
 
 it('can render with autofocus', function () {
-    Livewire::test(MyDialog::class, ['autoFocus' => true])
+    Livewire::test(MyDialog::class, ['autofocus' => true])
         ->assertSee('autofocus');
 });
 
 it('can render with contenteditable', function () {
-    Livewire::test(MyDialog::class, ['contentEditable' => true])
+    Livewire::test(MyDialog::class, ['contenteditable' => true])
         ->assertSee('contenteditable');
 });
 
@@ -44,12 +44,12 @@ it('can render with dir', function () {
 });
 
 it('can render with draggable', function () {
-    Livewire::test(MyDialog::class, ['draggable' => true])
+    Livewire::test(MyDialog::class, ['draggable' => 'true'])
         ->assertSee('draggable');
 });
 
 it('can render with enterkeyhint', function () {
-    Livewire::test(MyDialog::class, ['enterKeyHint' => 'enter'])
+    Livewire::test(MyDialog::class, ['enterkeyhint' => 'enter'])
         ->assertSee('enterkeyhint="enter"', false);
 });
 
@@ -79,7 +79,7 @@ it('can render with parts', function () {
 });
 
 it('can render with popOver', function () {
-    Livewire::test(MyDialog::class, ['popOver' => true])
+    Livewire::test(MyDialog::class, ['popover' => true])
         ->assertSee('popover');
 });
 
@@ -94,7 +94,7 @@ it('can render with slot', function () {
 });
 
 it('can render with spellcheck', function () {
-    Livewire::test(MyDialog::class, ['spellCheck' => true])
+    Livewire::test(MyDialog::class, ['spellcheck' => 'true'])
         ->assertSee('spellcheck');
 });
 
@@ -109,7 +109,7 @@ it('can render with title', function () {
 });
 
 it('can render with translate', function () {
-    Livewire::test(MyDialog::class, ['translate' => true])
+    Livewire::test(MyDialog::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
 
@@ -119,5 +119,5 @@ it('can render with open', function () {
 });
 
 it('throws an exception if the tabindex is set', function () {
-    Livewire::test(MyDialog::class, ['open' => true, 'tabIndex' => 1]);
+    Livewire::test(MyDialog::class, ['open' => true, 'tabindex' => 1]);
 })->throws(\Illuminate\View\ViewException::class, 'A dialog element should not have a tabindex attribute');

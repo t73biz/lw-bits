@@ -9,22 +9,22 @@ it('can render', function () {
 });
 
 it('can render with accesskey', function () {
-    Livewire::test(MyDetails::class, ['accessKey' => true])
+    Livewire::test(MyDetails::class, ['accesskey' => true])
         ->assertSee('accesskey');
 });
 
 it('can render with autocapitalize', function () {
-    Livewire::test(MyDetails::class, ['autoCapitalize' => true])
+    Livewire::test(MyDetails::class, ['autocapitalize' => true])
         ->assertSee('autocapitalize');
 });
 
 it('can render with autofocus', function () {
-    Livewire::test(MyDetails::class, ['autoFocus' => true])
+    Livewire::test(MyDetails::class, ['autofocus' => true])
         ->assertSee('autofocus');
 });
 
 it('can render with contenteditable', function () {
-    Livewire::test(MyDetails::class, ['contentEditable' => true])
+    Livewire::test(MyDetails::class, ['contenteditable' => true])
         ->assertSee('contenteditable');
 });
 
@@ -44,12 +44,12 @@ it('can render with dir', function () {
 });
 
 it('can render with draggable', function () {
-    Livewire::test(MyDetails::class, ['draggable' => true])
+    Livewire::test(MyDetails::class, ['draggable' => 'true'])
         ->assertSee('draggable');
 });
 
 it('can render with enterkeyhint', function () {
-    Livewire::test(MyDetails::class, ['enterKeyHint' => 'enter'])
+    Livewire::test(MyDetails::class, ['enterkeyhint' => 'enter'])
         ->assertSee('enterkeyhint="enter"', false);
 });
 
@@ -79,7 +79,7 @@ it('can render with parts', function () {
 });
 
 it('can render with popOver', function () {
-    Livewire::test(MyDetails::class, ['popOver' => true])
+    Livewire::test(MyDetails::class, ['popover' => true])
         ->assertSee('popover');
 });
 
@@ -94,7 +94,7 @@ it('can render with slot', function () {
 });
 
 it('can render with spellcheck', function () {
-    Livewire::test(MyDetails::class, ['spellCheck' => true])
+    Livewire::test(MyDetails::class, ['spellcheck' => 'true'])
         ->assertSee('spellcheck');
 });
 
@@ -104,7 +104,7 @@ it('can render with styles', function () {
 });
 
 it('can render with tabindex', function () {
-    Livewire::test(MyDetails::class, ['tabIndex' => 1])
+    Livewire::test(MyDetails::class, ['tabindex' => 1])
         ->assertSee('tabindex="1"', false);
 });
 
@@ -114,7 +114,7 @@ it('can render with title', function () {
 });
 
 it('can render with translate', function () {
-    Livewire::test(MyDetails::class, ['translate' => true])
+    Livewire::test(MyDetails::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
 

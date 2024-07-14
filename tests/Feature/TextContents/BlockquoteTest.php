@@ -9,22 +9,22 @@ it('can render', function () {
 });
 
 it('can render with accesskey', function () {
-    Livewire::test(MyBlockquote::class, ['accessKey' => true])
+    Livewire::test(MyBlockquote::class, ['accesskey' => true])
         ->assertSee('accesskey');
 });
 
 it('can render with autocapitalize', function () {
-    Livewire::test(MyBlockquote::class, ['autoCapitalize' => true])
+    Livewire::test(MyBlockquote::class, ['autocapitalize' => true])
         ->assertSee('autocapitalize');
 });
 
 it('can render with autofocus', function () {
-    Livewire::test(MyBlockquote::class, ['autoFocus' => true])
+    Livewire::test(MyBlockquote::class, ['autofocus' => true])
         ->assertSee('autofocus');
 });
 
 it('can render with contenteditable', function () {
-    Livewire::test(MyBlockquote::class, ['contentEditable' => true])
+    Livewire::test(MyBlockquote::class, ['contenteditable' => true])
         ->assertSee('contenteditable');
 });
 
@@ -44,12 +44,12 @@ it('can render with dir', function () {
 });
 
 it('can render with draggable', function () {
-    Livewire::test(MyBlockquote::class, ['draggable' => true])
+    Livewire::test(MyBlockquote::class, ['draggable' => 'true'])
         ->assertSee('draggable');
 });
 
 it('can render with enterkeyhint', function () {
-    Livewire::test(MyBlockquote::class, ['enterKeyHint' => 'enter'])
+    Livewire::test(MyBlockquote::class, ['enterkeyhint' => 'enter'])
         ->assertSee('enterkeyhint="enter"', false);
 });
 
@@ -79,7 +79,7 @@ it('can render with parts', function () {
 });
 
 it('can render with popOver', function () {
-    Livewire::test(MyBlockquote::class, ['popOver' => true])
+    Livewire::test(MyBlockquote::class, ['popover' => true])
         ->assertSee('popover');
 });
 
@@ -94,7 +94,7 @@ it('can render with slot', function () {
 });
 
 it('can render with spellcheck', function () {
-    Livewire::test(MyBlockquote::class, ['spellCheck' => true])
+    Livewire::test(MyBlockquote::class, ['spellcheck' => 'true'])
         ->assertSee('spellcheck');
 });
 
@@ -104,7 +104,7 @@ it('can render with styles', function () {
 });
 
 it('can render with tabindex', function () {
-    Livewire::test(MyBlockquote::class, ['tabIndex' => 1])
+    Livewire::test(MyBlockquote::class, ['tabindex' => 1])
         ->assertSee('tabindex="1"', false);
 });
 
@@ -114,7 +114,7 @@ it('can render with title', function () {
 });
 
 it('can render with translate', function () {
-    Livewire::test(MyBlockquote::class, ['translate' => true])
+    Livewire::test(MyBlockquote::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
 
