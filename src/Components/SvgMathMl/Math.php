@@ -19,6 +19,18 @@ class Math extends Component
     use GlobalAttributesTrait;
 
     /**
+     * This enumerated attribute specifies how the enclosed MathML markup should be rendered.
+     * It can have one of the following values:
+     *
+     * - block: Which means that this element will be displayed in its own block outside the current span of text and
+     *          with math-style set to normal.
+     * - inline: Which means that this element will be displayed inside the current span of text and with math-style set
+     *           to compact.
+     * If not present, its default value is inline.
+     */
+    public string $display = '';
+
+    /**
      * The specific attributes for the embed component
      */
     private AttributeCollection $specificAttributes;
@@ -32,6 +44,14 @@ class Math extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
+        if (! empty($this->display)) {
+            if (! in_array($this->display, ['block', 'inline'])) {
+                throw new \T73biz\LwBits\Exceptions\InvalidAttributeException(
+                    'The display attribute must be either block or inline.'
+                );
+            }
+            $this->specificAttributes->add(['display' => $this->display]);
+        }
     }
 
     /**

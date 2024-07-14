@@ -117,3 +117,13 @@ it('can render with translate', function () {
     Livewire::test(MyMath::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
+
+it('can render with display', function () {
+    Livewire::test(MyMath::class, ['display' => 'block'])
+        ->assertSee('display="block"', false);
+});
+
+it('throws an exception with invalid display', function () {
+    $this->expectExceptionMessage('The display attribute must be either block or inline.');
+    Livewire::test(MyMath::class, ['display' => 'invalid']);
+});
