@@ -1,3 +1,3 @@
-<textarea {!! $globalAttributes !!}>
+<textarea {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </textarea>
