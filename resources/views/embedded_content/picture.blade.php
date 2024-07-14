@@ -1,0 +1,3 @@
+<picture {!! $globalAttributes !!}>
+    {{ $slot }}
+</picture>
