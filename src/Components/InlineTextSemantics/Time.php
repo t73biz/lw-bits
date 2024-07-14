@@ -19,6 +19,9 @@ class Time extends Component
 {
     use GlobalAttributesTrait;
 
+    /**
+     * The specific attributes for the time component
+     */
     private AttributeCollection $specificAttributes;
 
     /**

@@ -8,7 +8,6 @@ use Illuminate\Contracts\View\View as ContractedView;
 use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
-use Livewire\Features\SupportAttributes\AttributeCollection;
 use T73biz\LwBits\Components\GlobalAttributesTrait;
 
 /**
@@ -19,11 +18,6 @@ class Picture extends Component
     use GlobalAttributesTrait;
 
     /**
-     * The specific attributes for the embed component
-     */
-    private AttributeCollection $specificAttributes;
-
-    /**
      * Standard mount function
      *
      * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
@@ -31,7 +25,6 @@ class Picture extends Component
     public function mount(): void
     {
         $this->setGlobalAttributes();
-        $this->specificAttributes = new AttributeCollection();
     }
 
     /**
@@ -43,7 +36,6 @@ class Picture extends Component
             'lw-bits::embedded_content.picture',
             [
                 'globalAttributes' => $this->getGlobalAttributes(),
-                'specificAttributes' => $this->parseAttributes($this->specificAttributes),
                 'slot' => '',
             ]
         );
