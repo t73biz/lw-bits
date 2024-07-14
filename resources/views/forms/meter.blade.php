@@ -1,0 +1,3 @@
+<meter {!! $globalAttributes !!}>
+    {{ $slot }}
+</meter>
