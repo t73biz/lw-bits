@@ -1,0 +1,3 @@
+<button {!! $globalAttributes !!}>
+    {{ $slot }}
+</button>
