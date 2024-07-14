@@ -9,22 +9,22 @@ it('can render', function () {
 });
 
 it('can render with accesskey', function () {
-    Livewire::test(MyMap::class, ['name' => 'my-map', 'accessKey' => true])
+    Livewire::test(MyMap::class, ['name' => 'my-map', 'accesskey' => true])
         ->assertSee('accesskey');
 });
 
 it('can render with autocapitalize', function () {
-    Livewire::test(MyMap::class, ['name' => 'my-map', 'autoCapitalize' => true])
+    Livewire::test(MyMap::class, ['name' => 'my-map', 'autocapitalize' => true])
         ->assertSee('autocapitalize');
 });
 
 it('can render with autofocus', function () {
-    Livewire::test(MyMap::class, ['name' => 'my-map', 'autoFocus' => true])
+    Livewire::test(MyMap::class, ['name' => 'my-map', 'autofocus' => true])
         ->assertSee('autofocus');
 });
 
 it('can render with contenteditable', function () {
-    Livewire::test(MyMap::class, ['name' => 'my-map', 'contentEditable' => true])
+    Livewire::test(MyMap::class, ['name' => 'my-map', 'contenteditable' => true])
         ->assertSee('contenteditable');
 });
 
@@ -49,7 +49,7 @@ it('can render with draggable', function () {
 });
 
 it('can render with enterkeyhint', function () {
-    Livewire::test(MyMap::class, ['name' => 'my-map', 'enterKeyHint' => 'enter'])
+    Livewire::test(MyMap::class, ['name' => 'my-map', 'enterkeyhint' => 'enter'])
         ->assertSee('enterkeyhint="enter"', false);
 });
 
@@ -79,7 +79,7 @@ it('can render with parts', function () {
 });
 
 it('can render with popOver', function () {
-    Livewire::test(MyMap::class, ['name' => 'my-map', 'popOver' => true])
+    Livewire::test(MyMap::class, ['name' => 'my-map', 'popover' => true])
         ->assertSee('popover');
 });
 
@@ -94,7 +94,7 @@ it('can render with slot', function () {
 });
 
 it('can render with spellcheck', function () {
-    Livewire::test(MyMap::class, ['name' => 'my-map', 'spellCheck' => true])
+    Livewire::test(MyMap::class, ['name' => 'my-map', 'spellcheck' => true])
         ->assertSee('spellcheck');
 });
 
@@ -104,7 +104,7 @@ it('can render with styles', function () {
 });
 
 it('can render with tabindex', function () {
-    Livewire::test(MyMap::class, ['name' => 'my-map', 'tabIndex' => 1])
+    Livewire::test(MyMap::class, ['name' => 'my-map', 'tabindex' => 1])
         ->assertSee('tabindex="1"', false);
 });
 

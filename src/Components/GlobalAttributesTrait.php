@@ -10,30 +10,6 @@ use Livewire\Features\SupportAttributes\AttributeCollection;
  * Global attributes are attributes common to all HTML elements.
  *
  * @link https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
- *
- * @property string $accessKey
- * @property bool $autoCapitalize
- * @property bool $autoFocus
- * @property bool $contentEditable
- * @property array $cssClasses
- * @property array $data
- * @property string $direction
- * @property bool $draggable
- * @property string $enterKeyHint
- * @property bool $hidden
- * @property string $id
- * @property string $language
- * @property string $nonce
- * @property array $parts
- * @property string $role
- * @property mixed $slot
- * @property string $slotAttribute
- * @property bool $spellCheck
- * @property array $styles
- * @property int $tabIndex
- * @property string $title
- * @property bool $translate
- * @property string $virtualKeyboardPolicy
  */
 trait GlobalAttributesTrait
 {
@@ -41,27 +17,25 @@ trait GlobalAttributesTrait
      * Specifies a shortcut key to activate/focus an element.
      * AKA: accesskey attribute
      */
-    public string $accessKey = '';
-
-    protected AttributeCollection $attributes;
+    public string $accesskey = '';
 
     /**
      * Specifies whether the element should automatically get focus when the page loads.
      * AKA: autocapitalize attribute
      */
-    public bool $autoCapitalize = false;
+    public bool $autocapitalize = false;
 
     /**
      * Specifies whether the element should automatically get focus when the page loads.
      * AKA: autofocus attribute
      */
-    public bool $autoFocus = false;
+    public bool $autofocus = false;
 
     /**
      * Specifies whether the content of an element is editable or not.
      * AKA: contenteditable attribute
      */
-    public bool $contentEditable = false;
+    public bool $contenteditable = false;
 
     /**
      * Specifies one or more classnames for an element (refers to a class in a style sheet).
@@ -103,7 +77,7 @@ trait GlobalAttributesTrait
      * Specifies what action label (or icon) to present for the enter key on virtual keyboards.
      * AKA: enterkeyhint attribute
      */
-    public string $enterKeyHint = '';
+    public string $enterkeyhint = '';
 
     /**
      * An enumerated attribute indicating that the element is not yet, or is no longer, relevant. For example,
@@ -148,7 +122,7 @@ trait GlobalAttributesTrait
      * @link https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
      * AKA: popover attribute
      */
-    public bool $popOver = false;
+    public bool $popover = false;
 
     /**
      * Roles define the semantic meaning of content, allowing screen readers and other tools to present and support
@@ -174,7 +148,7 @@ trait GlobalAttributesTrait
      * Specifies whether the element is to have its spelling and grammar checked or not.
      * AKA: spellcheck attribute
      */
-    public bool $spellCheck = false;
+    public bool $spellcheck = false;
 
     /**
      * Specifies an inline CSS style for an element.
@@ -186,7 +160,7 @@ trait GlobalAttributesTrait
      * Specifies the tab order of an element.
      * AKA: tabindex attribute
      */
-    public int $tabIndex = 0;
+    public int $tabindex = 0;
 
     /**
      * Specifies extra information about an element (displayed as a tooltip).
@@ -200,6 +174,9 @@ trait GlobalAttributesTrait
      */
     public bool $translate = false;
 
+    /**
+     * Get the global attributes
+     */
     public function getGlobalAttributes(): string
     {
         return $this->parseAttributes($this->attributes);
@@ -225,21 +202,26 @@ trait GlobalAttributesTrait
     }
 
     /**
+     * The attributes collection
+     */
+    protected AttributeCollection $attributes;
+
+    /**
      * Set the global attributes
      */
     public function setGlobalAttributes(): void
     {
         $this->attributes = new AttributeCollection();
-        if (! empty($this->accessKey)) {
-            $this->attributes->add(['accesskey' => $this->accessKey]);
+        if (! empty($this->accesskey)) {
+            $this->attributes->add(['accesskey' => $this->accesskey]);
         }
-        if ($this->autoCapitalize) {
+        if ($this->autocapitalize) {
             $this->attributes->add('autocapitalize');
         }
-        if ($this->autoFocus) {
+        if ($this->autofocus) {
             $this->attributes->add('autofocus');
         }
-        if ($this->contentEditable) {
+        if ($this->contenteditable) {
             $this->attributes->add('contenteditable');
         }
         if (! empty($this->cssClasses)) {
@@ -256,8 +238,8 @@ trait GlobalAttributesTrait
         if ($this->draggable) {
             $this->attributes->add('draggable');
         }
-        if (! empty($this->enterKeyHint)) {
-            $this->attributes->add(['enterkeyhint' => $this->enterKeyHint]);
+        if (! empty($this->enterkeyhint)) {
+            $this->attributes->add(['enterkeyhint' => $this->enterkeyhint]);
         }
         if ($this->hidden) {
             $this->attributes->add('hidden');
@@ -274,7 +256,7 @@ trait GlobalAttributesTrait
         if (! empty($this->parts)) {
             $this->attributes->add(['part' => implode(' ', $this->parts)]);
         }
-        if (! empty($this->popOver)) {
+        if (! empty($this->popover)) {
             $this->attributes->add('popover');
         }
         if (! empty($this->role)) {
@@ -283,7 +265,7 @@ trait GlobalAttributesTrait
         if (! empty($this->slotAttribute)) {
             $this->attributes->add(['slot' => $this->slotAttribute]);
         }
-        if ($this->spellCheck) {
+        if ($this->spellcheck) {
             $this->attributes->add('spellcheck');
         }
         if (! empty($this->styles)) {
@@ -293,8 +275,8 @@ trait GlobalAttributesTrait
             }
             $this->attributes->add(['style' => implode(';', $styles)]);
         }
-        if (! empty($this->tabIndex)) {
-            $this->attributes->add(['tabindex' => $this->tabIndex]);
+        if (! empty($this->tabindex)) {
+            $this->attributes->add(['tabindex' => $this->tabindex]);
         }
         if (! empty($this->title)) {
             $this->attributes->add(['title' => $this->title]);

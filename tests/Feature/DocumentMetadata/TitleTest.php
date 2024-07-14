@@ -9,22 +9,22 @@ it('can render', function () {
 });
 
 it('can render with accesskey', function () {
-    Livewire::test(MyTitle::class, ['accessKey' => true])
+    Livewire::test(MyTitle::class, ['accesskey' => true])
         ->assertSee('accesskey');
 });
 
 it('can render with autocapitalize', function () {
-    Livewire::test(MyTitle::class, ['autoCapitalize' => true])
+    Livewire::test(MyTitle::class, ['autocapitalize' => true])
         ->assertSee('autocapitalize');
 });
 
 it('can render with autofocus', function () {
-    Livewire::test(MyTitle::class, ['autoFocus' => true])
+    Livewire::test(MyTitle::class, ['autofocus' => true])
         ->assertSee('autofocus');
 });
 
 it('can render with contenteditable', function () {
-    Livewire::test(MyTitle::class, ['contentEditable' => true])
+    Livewire::test(MyTitle::class, ['contenteditable' => true])
         ->assertSee('contenteditable');
 });
 
@@ -49,7 +49,7 @@ it('can render with draggable', function () {
 });
 
 it('can render with enterkeyhint', function () {
-    Livewire::test(MyTitle::class, ['enterKeyHint' => 'enter'])
+    Livewire::test(MyTitle::class, ['enterkeyhint' => 'enter'])
         ->assertSee('enterkeyhint="enter"', false);
 });
 
@@ -79,7 +79,7 @@ it('can render with parts', function () {
 });
 
 it('can render with popOver', function () {
-    Livewire::test(MyTitle::class, ['popOver' => true])
+    Livewire::test(MyTitle::class, ['popover' => true])
         ->assertSee('popover');
 });
 
@@ -94,7 +94,7 @@ it('can render with slot', function () {
 });
 
 it('can render with spellcheck', function () {
-    Livewire::test(MyTitle::class, ['spellCheck' => true])
+    Livewire::test(MyTitle::class, ['spellcheck' => true])
         ->assertSee('spellcheck');
 });
 
@@ -104,7 +104,7 @@ it('can render with styles', function () {
 });
 
 it('can render with tabindex', function () {
-    Livewire::test(MyTitle::class, ['tabIndex' => 1])
+    Livewire::test(MyTitle::class, ['tabindex' => 1])
         ->assertSee('tabindex="1"', false);
 });
 

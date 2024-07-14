@@ -9,22 +9,22 @@ it('can render', function () {
 });
 
 it('can render with accesskey', function () {
-    Livewire::test(MyLi::class, ['accessKey' => true])
+    Livewire::test(MyLi::class, ['accesskey' => true])
         ->assertSee('accesskey');
 });
 
 it('can render with autocapitalize', function () {
-    Livewire::test(MyLi::class, ['autoCapitalize' => true])
+    Livewire::test(MyLi::class, ['autocapitalize' => true])
         ->assertSee('autocapitalize');
 });
 
 it('can render with autofocus', function () {
-    Livewire::test(MyLi::class, ['autoFocus' => true])
+    Livewire::test(MyLi::class, ['autofocus' => true])
         ->assertSee('autofocus');
 });
 
 it('can render with contenteditable', function () {
-    Livewire::test(MyLi::class, ['contentEditable' => true])
+    Livewire::test(MyLi::class, ['contenteditable' => true])
         ->assertSee('contenteditable');
 });
 
@@ -49,7 +49,7 @@ it('can render with draggable', function () {
 });
 
 it('can render with enterkeyhint', function () {
-    Livewire::test(MyLi::class, ['enterKeyHint' => 'enter'])
+    Livewire::test(MyLi::class, ['enterkeyhint' => 'enter'])
         ->assertSee('enterkeyhint="enter"', false);
 });
 
@@ -79,7 +79,7 @@ it('can render with parts', function () {
 });
 
 it('can render with popOver', function () {
-    Livewire::test(MyLi::class, ['popOver' => true])
+    Livewire::test(MyLi::class, ['popover' => true])
         ->assertSee('popover');
 });
 
@@ -94,7 +94,7 @@ it('can render with slot', function () {
 });
 
 it('can render with spellcheck', function () {
-    Livewire::test(MyLi::class, ['spellCheck' => true])
+    Livewire::test(MyLi::class, ['spellcheck' => true])
         ->assertSee('spellcheck');
 });
 
@@ -104,7 +104,7 @@ it('can render with styles', function () {
 });
 
 it('can render with tabindex', function () {
-    Livewire::test(MyLi::class, ['tabIndex' => 1])
+    Livewire::test(MyLi::class, ['tabindex' => 1])
         ->assertSee('tabindex="1"', false);
 });
 
