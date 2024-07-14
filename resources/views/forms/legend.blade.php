@@ -1,0 +1,3 @@
+<legend {!! $globalAttributes !!}>
+    {{ $slot }}
+</legend>
