@@ -1,0 +1,3 @@
+<dialog {!! $globalAttributes !!}>
+    {{ $slot }}
+</dialog>
