@@ -1,0 +1,3 @@
+<select {!! $globalAttributes !!}>
+    {{ $slot }}
+</select>
