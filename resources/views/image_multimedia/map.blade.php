@@ -1,3 +1,3 @@
-<map {!! $globalAttributes !!}>
+<map {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </map>
