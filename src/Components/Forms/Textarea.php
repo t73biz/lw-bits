@@ -129,6 +129,9 @@ class Textarea extends Component
      */
     public string $wrap = '';
 
+    /**
+     * The specific attributes for the textarea component
+     */
     private AttributeCollection $specificAttributes;
 
     /**

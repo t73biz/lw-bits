@@ -58,6 +58,8 @@ class Meta extends Component
 
     /**
      * Standard mount function
+     *
+     * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
      */
     public function mount(): void
     {
@@ -83,7 +85,7 @@ class Meta extends Component
     public function render(): Application|ContractedApplication|ContractedView|Factory|View
     {
         return view(
-            'lw-bits::text_contents.div',
+            'lw-bits::document_metadata.meta',
             [
                 'globalAttributes' => $this->getGlobalAttributes(),
                 'specificAttributes' => $this->parseAttributes($this->specificAttributes),

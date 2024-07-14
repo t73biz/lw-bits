@@ -30,8 +30,8 @@ class Anchor extends Component
     public string $href = '';
 
     /**
-     * This attribute indicates the language of the linked resource. It is purely advisory. Allowed values are determined
-     * by BCP47 for HTML5 and by RFC1766 for HTML 4.01:
+     * This attribute indicates the language of the linked resource. It is purely advisory.
+     * Allowed values are determined by BCP47 for HTML5 and by RFC1766 for HTML 4.01:
      */
     public string $hreflang = '';
 
@@ -93,6 +93,8 @@ class Anchor extends Component
 
     /**
      * Standard mount function
+     *
+     * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
      */
     public function mount(): void
     {

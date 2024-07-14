@@ -1,3 +1,3 @@
-<fieldset {!! $globalAttributes !!}>
+<fieldset {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </fieldset>

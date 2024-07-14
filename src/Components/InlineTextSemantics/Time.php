@@ -2,6 +2,7 @@
 
 namespace T73biz\LwBits\Components\InlineTextSemantics;
 
+use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application as ContractedApplication;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View as ContractedView;
@@ -23,17 +24,19 @@ class Time extends Component
     /**
      * A valid date string
      */
-    public string $dateTime = '';
+    public ?Carbon $dateTime = null;
 
     /**
      * Standard mount function
+     *
+     * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
      */
     public function mount(): void
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
-        if (! empty($this->dateTime)) {
-            $this->specificAttributes->add(['datetime' => $this->dateTime]);
+        if (is_a($this->dateTime, Carbon::class)) {
+            $this->specificAttributes->add(['datetime' => $this->dateTime->toDateTimeLocalString()]);
         }
     }
 

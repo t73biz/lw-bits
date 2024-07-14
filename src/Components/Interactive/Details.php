@@ -32,7 +32,7 @@ class Details extends Component
     /**
      * This Boolean attribute indicates whether the details — that is, the contents of the <details> element — are
      * currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent.
-     * By default this attribute is absent which means the details are not visible.
+     * By default, this attribute is absent which means the details are not visible.
      */
     public bool $open = false;
 
@@ -43,6 +43,8 @@ class Details extends Component
 
     /**
      * Standard mount function
+     *
+     * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
      */
     public function mount(): void
     {
