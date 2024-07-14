@@ -1,0 +1,3 @@
+<form {!! $globalAttributes !!}>
+    {{ $slot }}
+</form>
