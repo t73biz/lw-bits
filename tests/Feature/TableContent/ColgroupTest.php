@@ -117,3 +117,8 @@ it('can render with translate', function () {
     Livewire::test(MyColgroup::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
+
+it('can render with span', function () {
+    Livewire::test(MyColgroup::class, ['span' => 2])
+        ->assertSee('span="2"', false);
+});

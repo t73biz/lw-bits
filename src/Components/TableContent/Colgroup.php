@@ -19,6 +19,12 @@ class Colgroup extends Component
     use GlobalAttributesTrait;
 
     /**
+     * Specifies the number of consecutive columns the <col> element spans. The value must be a positive integer greater
+     * than zero. If not present, its default value is 1.
+     */
+    public int $span = 1;
+
+    /**
      * The specific attributes for the embed component
      */
     private AttributeCollection $specificAttributes;
@@ -32,6 +38,9 @@ class Colgroup extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
+        if ($this->span !== 1) {
+            $this->specificAttributes->add(['span' => $this->span]);
+        }
     }
 
     /**

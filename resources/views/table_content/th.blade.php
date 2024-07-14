@@ -1,3 +1,3 @@
-<th {!! $globalAttributes !!}>
+<th {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </th>
