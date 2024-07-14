@@ -2,6 +2,9 @@
 
 All notable changes to `lw-bits` will be documented in this file.
 
+## 0.4.0 - 2024-07-13
+Adding Image and Multimedia components
+
 ## 0.3.0 - 2024-07-03
 Documentation updates
 
