@@ -1,0 +1,3 @@
+<noscript {!! $globalAttributes !!}>
+    {{ $slot }}
+</noscript>
