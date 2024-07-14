@@ -1,0 +1,3 @@
+<datalist {!! $globalAttributes !!}>
+    {{ $slot }}
+</datalist>

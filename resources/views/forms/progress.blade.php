@@ -1,0 +1,3 @@
+<progress {!! $globalAttributes !!}>
+    {{ $slot }}
+</progress>

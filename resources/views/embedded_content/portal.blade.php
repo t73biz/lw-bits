@@ -1,0 +1,3 @@
+<portal {!! $globalAttributes !!}>
+    {{ $slot }}
+</portal>

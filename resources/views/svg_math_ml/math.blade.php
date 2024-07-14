@@ -1,0 +1,3 @@
+<math {!! $globalAttributes !!}>
+    {{ $slot }}
+</math>
