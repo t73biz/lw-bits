@@ -49,7 +49,7 @@ it('can render with dir', function () {
 });
 
 it('can render with draggable', function () {
-    Livewire::test(MyBody::class, ['draggable' => true])
+    Livewire::test(MyBody::class, ['draggable' => 'true'])
         ->assertSee('draggable');
 });
 
@@ -99,7 +99,7 @@ it('can render with slot', function () {
 });
 
 it('can render with spellcheck', function () {
-    Livewire::test(MyBody::class, ['spellcheck' => true])
+    Livewire::test(MyBody::class, ['spellcheck' => 'true'])
         ->assertSee('spellcheck');
 });
 
@@ -119,7 +119,7 @@ it('can render with title', function () {
 });
 
 it('can render with translate', function () {
-    Livewire::test(MyBody::class, ['translate' => true])
+    Livewire::test(MyBody::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
 

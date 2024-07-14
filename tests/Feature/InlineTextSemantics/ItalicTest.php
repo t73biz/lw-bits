@@ -44,7 +44,7 @@ it('can render with dir', function () {
 });
 
 it('can render with draggable', function () {
-    Livewire::test(MyItalic::class, ['draggable' => true])
+    Livewire::test(MyItalic::class, ['draggable' => 'true'])
         ->assertSee('draggable');
 });
 
@@ -94,7 +94,7 @@ it('can render with slot', function () {
 });
 
 it('can render with spellcheck', function () {
-    Livewire::test(MyItalic::class, ['spellcheck' => true])
+    Livewire::test(MyItalic::class, ['spellcheck' => 'true'])
         ->assertSee('spellcheck');
 });
 
@@ -114,6 +114,6 @@ it('can render with title', function () {
 });
 
 it('can render with translate', function () {
-    Livewire::test(MyItalic::class, ['translate' => true])
+    Livewire::test(MyItalic::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });

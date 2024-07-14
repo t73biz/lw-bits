@@ -44,7 +44,7 @@ it('can render with dir', function () {
 });
 
 it('can render with draggable', function () {
-    Livewire::test(MyMap::class, ['name' => 'my-map', 'draggable' => true])
+    Livewire::test(MyMap::class, ['name' => 'my-map', 'draggable' => 'true'])
         ->assertSee('draggable');
 });
 
@@ -94,7 +94,7 @@ it('can render with slot', function () {
 });
 
 it('can render with spellcheck', function () {
-    Livewire::test(MyMap::class, ['name' => 'my-map', 'spellcheck' => true])
+    Livewire::test(MyMap::class, ['name' => 'my-map', 'spellcheck' => 'true'])
         ->assertSee('spellcheck');
 });
 
@@ -114,7 +114,7 @@ it('can render with title', function () {
 });
 
 it('can render with translate', function () {
-    Livewire::test(MyMap::class, ['name' => 'my-map', 'translate' => true])
+    Livewire::test(MyMap::class, ['name' => 'my-map', 'translate' => 'yes'])
         ->assertSee('translate');
 });
 

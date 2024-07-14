@@ -44,7 +44,7 @@ it('can render with dir', function () {
 });
 
 it('can render with draggable', function () {
-    Livewire::test(MySamp::class, ['draggable' => true])
+    Livewire::test(MySamp::class, ['draggable' => 'true'])
         ->assertSee('draggable');
 });
 
@@ -94,7 +94,7 @@ it('can render with slot', function () {
 });
 
 it('can render with spellcheck', function () {
-    Livewire::test(MySamp::class, ['spellcheck' => true])
+    Livewire::test(MySamp::class, ['spellcheck' => 'true'])
         ->assertSee('spellcheck');
 });
 
@@ -114,6 +114,6 @@ it('can render with title', function () {
 });
 
 it('can render with translate', function () {
-    Livewire::test(MySamp::class, ['translate' => true])
+    Livewire::test(MySamp::class, ['translate' => 'yes'])
         ->assertSee('translate');
 });
