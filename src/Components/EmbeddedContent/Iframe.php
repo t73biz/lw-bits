@@ -9,6 +9,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
+use T73biz\LwBits\Components\AttributeTraits\DimensionalAttributes;
 use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
@@ -16,6 +17,7 @@ use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
  */
 class Iframe extends Component
 {
+    use DimensionalAttributes;
     use GlobalAttributes;
 
     /**
@@ -23,11 +25,6 @@ class Iframe extends Component
      * based on the origin of the request.
      */
     public string $allow = '';
-
-    /**
-     * The height of the frame in CSS pixels. Default is 150.
-     */
-    public int $height = 150;
 
     /**
      * Indicates when the browser should load the iframe.
@@ -120,11 +117,6 @@ class Iframe extends Component
     public string $srcdoc = '';
 
     /**
-     * The width of the frame in CSS pixels. Default is 300.
-     */
-    public int $width = 300;
-
-    /**
      * The specific attributes for the embed component
      */
     private AttributeCollection $specificAttributes;
@@ -138,11 +130,9 @@ class Iframe extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
+        $this->setDimensionalAttributes($this->specificAttributes);
         if (! empty($this->allow)) {
             $this->specificAttributes->add(['allow' => $this->allow]);
-        }
-        if ($this->height > 0) {
-            $this->specificAttributes->add(['height' => $this->height]);
         }
         if (! empty($this->loading)) {
             if (! in_array($this->loading, ['eager', 'lazy'])) {
@@ -206,14 +196,8 @@ class Iframe extends Component
             }
             $this->specificAttributes->add(['sandbox' => $this->sandbox]);
         }
-        if (! empty($this->src)) {
-            $this->specificAttributes->add(['src' => $this->src]);
-        }
         if (! empty($this->srcdoc)) {
             $this->specificAttributes->add(['srcdoc' => $this->srcdoc]);
-        }
-        if ($this->width > 0) {
-            $this->specificAttributes->add(['width' => $this->width]);
         }
     }
 
