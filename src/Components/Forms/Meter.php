@@ -9,6 +9,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
+use T73biz\LwBits\Components\AttributeTraits\DimensionalAttributes;
 use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
@@ -16,6 +17,7 @@ use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
  */
 class Meter extends Component
 {
+    use DimensionalAttributes;
     use GlobalAttributes;
 
     /**
@@ -41,18 +43,6 @@ class Meter extends Component
      * if less than the minimum value, the low value is equal to the minimum value.
      */
     public int $low = 0;
-
-    /**
-     * The upper numeric bound of the measured range. This must be greater than the minimum value (min
-     * attribute), if specified. If unspecified, the maximum value is 1.
-     */
-    public int $max = 1;
-
-    /**
-     * The lower numeric bound of the measured range. This must be less than the maximum value (max
-     * attribute), if specified. If unspecified, the minimum value is 0.
-     */
-    public int $min = 0;
 
     /**
      * This attribute indicates the optimal numeric value. It must be within the range (as defined by
@@ -88,6 +78,7 @@ class Meter extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
+        $this->setDimensionalAttributes($this->specificAttributes);
         if (! empty($this->form)) {
             $this->specificAttributes->add(['form' => $this->form]);
         }
@@ -96,12 +87,6 @@ class Meter extends Component
         }
         if ($this->low !== 0) {
             $this->specificAttributes->add(['low' => $this->low]);
-        }
-        if ($this->max !== 1) {
-            $this->specificAttributes->add(['max' => $this->max]);
-        }
-        if ($this->min !== 0) {
-            $this->specificAttributes->add(['min' => $this->min]);
         }
         if ($this->optimum !== 0) {
             $this->specificAttributes->add(['optimum' => $this->optimum]);
