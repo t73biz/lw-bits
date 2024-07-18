@@ -19,7 +19,7 @@ trait MaxlengthMinlengthAttributes
      *
      * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#client-side_validation
      */
-    public string $maxlength = '';
+    public int $maxlength = 0;
 
     /**
      * Valid for text, search, url, tel, email, and password, it defines the minimum string length (measured in UTF-16
@@ -34,17 +34,17 @@ trait MaxlengthMinlengthAttributes
      *
      * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#client-side_validation
      */
-    public string $minlength = '';
+    public int $minlength = 0;
 
     /**
      * Set the maxlength and minlength attributes.
      */
     public function setMaxlengthMinlengthAttributes(AttributeCollection &$specificAttributes): void
     {
-        if (! empty($this->maxlength)) {
+        if ($this->maxlength >= 0) {
             $specificAttributes->add(['maxlength' => $this->maxlength]);
         }
-        if (! empty($this->minlength)) {
+        if ($this->minlength >= 0) {
             $specificAttributes->add(['minlength' => $this->minlength]);
         }
     }
