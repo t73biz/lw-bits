@@ -9,14 +9,14 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
  * Class Th
  */
 class Th extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     /**
      * A short, abbreviated description of the header cell's content provided as an alternative label

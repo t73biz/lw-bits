@@ -9,14 +9,14 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
  * Class Portal
  */
 class Portal extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     /**
      * Indicates which referrer to send when fetching the frame's resource:

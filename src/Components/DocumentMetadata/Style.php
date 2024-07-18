@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 use T73biz\LwBits\Rules\MediaQuery;
 
 /**
@@ -18,7 +18,7 @@ use T73biz\LwBits\Rules\MediaQuery;
  */
 class Style extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     /**
      * This attribute defines which media the style should be applied to. Its value is a media query, which defaults to

@@ -9,14 +9,32 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\AutocompleteAttribute;
+use T73biz\LwBits\Components\AttributeTraits\GenericInputAttributes;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
+use T73biz\LwBits\Components\AttributeTraits\ListAttribute;
+use T73biz\LwBits\Components\AttributeTraits\MaxlengthMinlengthAttributes;
+use T73biz\LwBits\Components\AttributeTraits\MaxMinAttributes;
+use T73biz\LwBits\Components\AttributeTraits\PlaceholderAttribute;
+use T73biz\LwBits\Components\AttributeTraits\ReadonlyAttribute;
+use T73biz\LwBits\Components\AttributeTraits\RequiredAttribute;
+use T73biz\LwBits\Components\AttributeTraits\StepAttribute;
 
 /**
  * Class Number
  */
 class Number extends Component
 {
-    use GlobalAttributesTrait;
+    use AutocompleteAttribute;
+    use GenericInputAttributes;
+    use GlobalAttributes;
+    use ListAttribute;
+    use MaxlengthMinlengthAttributes;
+    use MaxMinAttributes;
+    use PlaceholderAttribute;
+    use ReadonlyAttribute;
+    use RequiredAttribute;
+    use StepAttribute;
 
     /**
      * The specific attributes for the Number component
@@ -32,6 +50,15 @@ class Number extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
+        $this->setAutocompleteAttribute($this->specificAttributes);
+        $this->setGenericInputAttributes($this->specificAttributes);
+        $this->setListAttribute($this->specificAttributes);
+        $this->setMaxlengthMinlengthAttributes($this->specificAttributes);
+        $this->setMaxMinAttributes($this->specificAttributes);
+        $this->setPlaceholderAttribute($this->specificAttributes);
+        $this->setReadonlyAttribute($this->specificAttributes);
+        $this->setRequiredAttribute($this->specificAttributes);
+        $this->setStepAttribute($this->specificAttributes);
     }
 
     /**

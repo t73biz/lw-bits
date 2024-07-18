@@ -9,14 +9,28 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\AutocompleteAttribute;
+use T73biz\LwBits\Components\AttributeTraits\GenericInputAttributes;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
+use T73biz\LwBits\Components\AttributeTraits\MaxlengthMinlengthAttributes;
+use T73biz\LwBits\Components\AttributeTraits\PlaceholderAttribute;
+use T73biz\LwBits\Components\AttributeTraits\ReadonlyAttribute;
+use T73biz\LwBits\Components\AttributeTraits\RequiredAttribute;
+use T73biz\LwBits\Components\AttributeTraits\SizeAttribute;
 
 /**
  * Class Password
  */
 class Password extends Component
 {
-    use GlobalAttributesTrait;
+    use AutocompleteAttribute;
+    use GenericInputAttributes;
+    use GlobalAttributes;
+    use MaxlengthMinlengthAttributes;
+    use PlaceholderAttribute;
+    use ReadonlyAttribute;
+    use RequiredAttribute;
+    use SizeAttribute;
 
     /**
      * The specific attributes for the Password component
@@ -32,6 +46,13 @@ class Password extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
+        $this->setAutocompleteAttribute($this->specificAttributes);
+        $this->setGenericInputAttributes($this->specificAttributes);
+        $this->setMaxlengthMinlengthAttributes($this->specificAttributes);
+        $this->setPlaceholderAttribute($this->specificAttributes);
+        $this->setReadonlyAttribute($this->specificAttributes);
+        $this->setRequiredAttribute($this->specificAttributes);
+        $this->setSizeAttribute($this->specificAttributes);
     }
 
     /**

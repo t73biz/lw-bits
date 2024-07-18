@@ -9,7 +9,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 use T73biz\LwBits\Exceptions\InvalidAttributeException;
 
 /**
@@ -17,7 +17,7 @@ use T73biz\LwBits\Exceptions\InvalidAttributeException;
  */
 class Form extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     /**
      * Space-separated character encodings the server accepts. The browser uses them in the order in which they

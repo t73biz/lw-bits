@@ -9,14 +9,20 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\CheckedAttribute;
+use T73biz\LwBits\Components\AttributeTraits\GenericInputAttributes;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
+use T73biz\LwBits\Components\AttributeTraits\RequiredAttribute;
 
 /**
  * Class Checkbox
  */
 class Checkbox extends Component
 {
-    use GlobalAttributesTrait;
+    use CheckedAttribute;
+    use GenericInputAttributes;
+    use GlobalAttributes;
+    use RequiredAttribute;
 
     /**
      * The specific attributes for the Checkbox component
@@ -32,6 +38,9 @@ class Checkbox extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
+        $this->setCheckedAttribute($this->specificAttributes);
+        $this->setGenericInputAttributes($this->specificAttributes, 'checkbox');
+        $this->setRequiredAttribute($this->specificAttributes);
     }
 
     /**

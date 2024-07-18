@@ -8,14 +8,14 @@ use Illuminate\Contracts\View\View as ContractedView;
 use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
  * Class Mark
  */
 class Mark extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     /**
      * Standard mount function

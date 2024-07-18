@@ -9,14 +9,18 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\FormRelatedAttributes;
+use T73biz\LwBits\Components\AttributeTraits\GenericInputAttributes;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
  * Class Submit
  */
 class Submit extends Component
 {
-    use GlobalAttributesTrait;
+    use FormRelatedAttributes;
+    use GenericInputAttributes;
+    use GlobalAttributes;
 
     /**
      * The specific attributes for the Submit component
@@ -32,6 +36,8 @@ class Submit extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
+        $this->setFormRelatedAttributes($this->specificAttributes);
+        $this->setGenericInputAttributes($this->specificAttributes);
     }
 
     /**

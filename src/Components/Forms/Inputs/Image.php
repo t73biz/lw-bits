@@ -9,14 +9,24 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\AltAttribute;
+use T73biz\LwBits\Components\AttributeTraits\DimensionalAttributes;
+use T73biz\LwBits\Components\AttributeTraits\FormRelatedAttributes;
+use T73biz\LwBits\Components\AttributeTraits\GenericInputAttributes;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
+use T73biz\LwBits\Components\AttributeTraits\SrcAttribute;
 
 /**
  * Class Image
  */
 class Image extends Component
 {
-    use GlobalAttributesTrait;
+    use AltAttribute;
+    use DimensionalAttributes;
+    use FormRelatedAttributes;
+    use GenericInputAttributes;
+    use GlobalAttributes;
+    use SrcAttribute;
 
     /**
      * The specific attributes for the Image component
@@ -32,6 +42,10 @@ class Image extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
+        $this->setAltAttribute($this->specificAttributes);
+        $this->setDimensionalAttributes($this->specificAttributes);
+        $this->setGenericInputAttributes($this->specificAttributes);
+        $this->setSrcAttribute($this->specificAttributes, true);
     }
 
     /**

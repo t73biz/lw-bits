@@ -9,24 +9,18 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\DimensionalAttributes;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
+use T73biz\LwBits\Components\AttributeTraits\SrcAttribute;
 
 /**
  * Class Embed
  */
 class Embed extends Component
 {
-    use GlobalAttributesTrait;
-
-    /**
-     * The displayed height of the resource, in CSS pixels. This must be an absolute value; percentages are not allowed.
-     */
-    public int $height = 0;
-
-    /**
-     * The URL of the resource being embedded.
-     */
-    public string $src = '';
+    use DimensionalAttributes;
+    use GlobalAttributes;
+    use SrcAttribute;
 
     /**
      * The MIME type to use to select the plug-in to instantiate.
@@ -34,11 +28,6 @@ class Embed extends Component
      * @see https://developer.mozilla.org/en-US/docs/Glossary/MIME_type
      */
     public string $type = '';
-
-    /**
-     * The displayed width of the resource, in CSS pixels. This must be an absolute value; percentages are not allowed.
-     */
-    public int $width = 0;
 
     /**
      * The specific attributes for the embed component
@@ -54,17 +43,10 @@ class Embed extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
-        if ($this->height > 0) {
-            $this->specificAttributes->add(['height' => $this->height]);
-        }
-        if (! empty($this->src)) {
-            $this->specificAttributes->add(['src' => $this->src]);
-        }
+        $this->setDimensionalAttributes($this->specificAttributes);
+        $this->setSrcAttribute($this->specificAttributes);
         if (! empty($this->type)) {
             $this->specificAttributes->add(['type' => $this->type]);
-        }
-        if ($this->width > 0) {
-            $this->specificAttributes->add(['width' => $this->width]);
         }
     }
 

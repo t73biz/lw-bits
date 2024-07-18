@@ -9,14 +9,20 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\FormRelatedAttributes;
+use T73biz\LwBits\Components\AttributeTraits\GenericInputAttributes;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
+use T73biz\LwBits\Components\AttributeTraits\PopoverRelatedAttributes;
 
 /**
  * Class Button
  */
 class Button extends Component
 {
-    use GlobalAttributesTrait;
+    use FormRelatedAttributes;
+    use GenericInputAttributes;
+    use GlobalAttributes;
+    use PopoverRelatedAttributes;
 
     /**
      * The specific attributes for the Button component
@@ -32,6 +38,9 @@ class Button extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
+        $this->setFormRelatedAttributes($this->specificAttributes);
+        $this->setGenericInputAttributes($this->specificAttributes);
+        $this->setPopoverAttributes($this->specificAttributes);
     }
 
     /**

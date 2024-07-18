@@ -9,7 +9,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 use T73biz\LwBits\Exceptions\InvalidAttributeException;
 
 /**
@@ -17,7 +17,7 @@ use T73biz\LwBits\Exceptions\InvalidAttributeException;
  */
 class Map extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     /**
      * The name attribute gives the map a name so that it can be referenced. The attribute must be present and must have
