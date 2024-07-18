@@ -26,8 +26,10 @@ trait AutocompleteAttribute
     {
         /**
          * Possible Values:
-         * - off: The browser is not allowed to automatically complete the input. Note: It can't prevent a password manager from asking the user if they want to save username and password information.
-         * - on: The browser is allowed to automatically complete the input with no guidance as to the type of data expected.
+         * - off: The browser is not allowed to automatically complete the input. Note: It can't prevent a password
+         *        manager from asking the user if they want to save username and password information.
+         * - on: The browser is allowed to automatically complete the input with no guidance as to the type of data
+         *       expected.
          * - <token-list>: An ordered set of space-separated tokens consisting of autofill detail tokens.
          *
          * If the autocomplete attribute is <token-list>, each token is the string "section-", case-insensitive,
@@ -102,7 +104,9 @@ trait AutocompleteAttribute
 
                 foreach ($valueParts as $key => $valuePart) {
                     if (str_starts_with($valuePart, 'section-') && $key !== 0) {
-                        throw new InvalidAttributeException('The autocomplete attribute value is invalid. The section token must be the first token.');
+                        throw new InvalidAttributeException(
+                            'The autocomplete attribute value is invalid. The section token must be the first token.'
+                        );
                     } elseif (! in_array($valuePart, $allowedValues) && ! str_starts_with($valuePart, 'section-')) {
                         throw new InvalidAttributeException('The autocomplete attribute value is invalid.');
                     }
