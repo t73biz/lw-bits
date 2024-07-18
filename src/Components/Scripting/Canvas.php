@@ -9,6 +9,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
+use T73biz\LwBits\Components\AttributeTraits\DimensionalAttributes;
 use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
@@ -16,17 +17,8 @@ use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
  */
 class Canvas extends Component
 {
+    use DimensionalAttributes;
     use GlobalAttributes;
-
-    /**
-     * The height of the coordinate space in CSS pixels. Defaults to 150.
-     */
-    public int $height = 0;
-
-    /**
-     * The width of the coordinate space in CSS pixels. Defaults to 300.
-     */
-    public int $width = 0;
 
     /**
      * The specific attributes for the embed component
@@ -42,12 +34,7 @@ class Canvas extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
-        if ($this->height > 0) {
-            $this->specificAttributes->add(['height' => $this->height]);
-        }
-        if ($this->width > 0) {
-            $this->specificAttributes->add(['width' => $this->width]);
-        }
+        $this->setDimensionalAttributes($this->specificAttributes);
     }
 
     /**
