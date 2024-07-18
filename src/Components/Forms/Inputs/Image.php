@@ -45,6 +45,7 @@ class Image extends Component
         $this->setAltAttribute($this->specificAttributes);
         $this->setDimensionalAttributes($this->specificAttributes);
         $this->setGenericInputAttributes($this->specificAttributes);
+        $this->setFormRelatedAttributes($this->specificAttributes, 'image');
         $this->setSrcAttribute($this->specificAttributes, true);
     }
 

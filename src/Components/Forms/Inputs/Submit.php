@@ -36,7 +36,7 @@ class Submit extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
-        $this->setFormRelatedAttributes($this->specificAttributes);
+        $this->setFormRelatedAttributes($this->specificAttributes, 'submit');
         $this->setGenericInputAttributes($this->specificAttributes);
     }
 

@@ -38,7 +38,7 @@ class Button extends Component
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
-        $this->setFormRelatedAttributes($this->specificAttributes);
+        $this->setFormRelatedAttributes($this->specificAttributes, 'button');
         $this->setGenericInputAttributes($this->specificAttributes);
         $this->setPopoverAttributes($this->specificAttributes);
     }

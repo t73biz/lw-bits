@@ -66,7 +66,7 @@ trait FormRelatedAttributes
      *
      * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
      */
-    public function setFormRelatedAttributes(AttributeCollection &$specificAttributes): void
+    public function setFormRelatedAttributes(AttributeCollection &$specificAttributes, string $type): void
     {
         if (! empty($this->formaction)) {
             if (empty($this->form)) {
@@ -78,7 +78,7 @@ trait FormRelatedAttributes
             if (empty($this->form)) {
                 throw new InvalidAttributeException('The formenctype attribute requires form attribute to be set.');
             }
-            if (! empty($this->type) && ! in_array($this->type, ['submit', 'image'])) {
+            if (! in_array($type, ['submit', 'image'])) {
                 throw new InvalidAttributeException(
                     'The formenctype attribute requires type attribute to be set to submit or image.'
                 );

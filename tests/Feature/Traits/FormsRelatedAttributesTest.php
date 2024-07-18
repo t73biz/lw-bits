@@ -1,7 +1,7 @@
 <?php
 
 use Livewire\Livewire;
-use T73biz\LwBits\Tests\TestSupport\Components\Forms\Inputs\MyButton;
+use T73biz\LwBits\Tests\TestSupport\Components\Forms\MyButton;
 
 it('can render with formaction', function () {
     Livewire::test(
