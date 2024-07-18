@@ -1,3 +1,3 @@
-<meter {!! $globalAttributes !!}>
+<meter {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </meter>

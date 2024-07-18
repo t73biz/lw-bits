@@ -1,3 +1,3 @@
-<svg {!! $globalAttributes !!}>
+<svg {!! $specificAttributes !!}>
     {{ $slot }}
 </svg>

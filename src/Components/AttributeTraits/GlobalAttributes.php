@@ -1,6 +1,6 @@
 <?php
 
-namespace T73biz\LwBits\Components;
+namespace T73biz\LwBits\Components\AttributeTraits;
 
 use Livewire\Features\SupportAttributes\AttributeCollection;
 use T73biz\LwBits\Exceptions\InvalidAttributeException;
@@ -12,7 +12,7 @@ use T73biz\LwBits\Exceptions\InvalidAttributeException;
  *
  * @link https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
  */
-trait GlobalAttributesTrait
+trait GlobalAttributes
 {
     /**
      * Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a

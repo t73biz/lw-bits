@@ -9,7 +9,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 use T73biz\LwBits\Exceptions\InvalidAttributeException;
 
 /**
@@ -17,7 +17,7 @@ use T73biz\LwBits\Exceptions\InvalidAttributeException;
  */
 class Textarea extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     /**
      * This attribute indicates whether the value of the control can be automatically completed by the browser.
@@ -129,6 +129,9 @@ class Textarea extends Component
      */
     public string $wrap = '';
 
+    /**
+     * The specific attributes for the textarea component
+     */
     private AttributeCollection $specificAttributes;
 
     /**

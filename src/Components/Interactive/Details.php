@@ -9,14 +9,14 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
  * Class Details
  */
 class Details extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     /**
      * This attribute enables multiple <details> elements to be connected, with only one open at a time. This allows
@@ -32,7 +32,7 @@ class Details extends Component
     /**
      * This Boolean attribute indicates whether the details — that is, the contents of the <details> element — are
      * currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent.
-     * By default this attribute is absent which means the details are not visible.
+     * By default, this attribute is absent which means the details are not visible.
      */
     public bool $open = false;
 
@@ -43,6 +43,8 @@ class Details extends Component
 
     /**
      * Standard mount function
+     *
+     * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
      */
     public function mount(): void
     {

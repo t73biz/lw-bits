@@ -9,7 +9,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 use T73biz\LwBits\Exceptions\InvalidAttributeException;
 
 /**
@@ -17,7 +17,7 @@ use T73biz\LwBits\Exceptions\InvalidAttributeException;
  */
 class Dialog extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     /**
      * Indicates that the dialog box is active and is available for interaction. If the open attribute is not set, the

@@ -1,3 +1,3 @@
-<form {!! $globalAttributes !!}>
+<form {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </form>

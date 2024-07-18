@@ -1,3 +1,3 @@
-<label {!! $globalAttributes !!}>
+<label {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </label>

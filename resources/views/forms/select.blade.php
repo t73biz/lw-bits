@@ -1,3 +1,3 @@
-<select {!! $globalAttributes !!}>
+<select {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </select>

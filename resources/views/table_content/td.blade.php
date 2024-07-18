@@ -1,3 +1,3 @@
-<td {!! $globalAttributes !!}>
+<td {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </td>

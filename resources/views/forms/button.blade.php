@@ -1,3 +1,3 @@
-<button {!! $globalAttributes !!}>
+<button {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </button>

@@ -1,3 +1,3 @@
-<optgroup {!! $globalAttributes !!}>
+<optgroup {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </optgroup>

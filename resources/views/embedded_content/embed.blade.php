@@ -1,3 +1,3 @@
-<embed {!! $globalAttributes !!}>
+<embed {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </embed>

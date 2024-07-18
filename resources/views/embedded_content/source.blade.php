@@ -1,3 +1,1 @@
-<source {!! $globalAttributes !!}>
-    {{ $slot }}
-</source>
+<source {!! $globalAttributes !!} {!! $specificAttributes !!}>
