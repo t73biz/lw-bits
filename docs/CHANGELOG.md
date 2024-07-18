@@ -2,7 +2,7 @@
 
 All notable changes to `lw-bits` will be documented in this file.
 
-## 1.0.0 - 2024-07-14
+## 1.0.0 - 2024-07-18
 Adding in specific attributes for all components.
 Modified attribute traits, usage, and testing.
 
