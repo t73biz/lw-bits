@@ -27,6 +27,9 @@ trait ListAttribute
      */
     public string $list = '';
 
+    /**
+     * Set the list attribute.
+     */
     public function setListAttribute(AttributeCollection &$specificAttributes): void
     {
         if (! empty($this->list)) {
