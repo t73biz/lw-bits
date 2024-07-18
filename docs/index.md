@@ -33,13 +33,6 @@ Optionally, you can publish the views using
 php artisan vendor:publish --tag="lw-bits-views"
 ```
 
-## Usage
-
-```php
-$lwBits = new T73biz\LwBits();
-echo $lwBits->echoPhrase('Hello, T73biz!');
-```
-
 ## Testing
 
 ```bash
