@@ -37,7 +37,7 @@ class Tel extends Component
     use SizeAttribute;
 
     /**
-     * The specific attributes for the Search component
+     * The specific attributes for the Tel component
      */
     private AttributeCollection $specificAttributes;
 

@@ -37,7 +37,7 @@ class Url extends Component
     use SizeAttribute;
 
     /**
-     * The specific attributes for the Search component
+     * The specific attributes for the Url component
      */
     private AttributeCollection $specificAttributes;
 

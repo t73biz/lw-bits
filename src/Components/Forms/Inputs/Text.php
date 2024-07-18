@@ -37,7 +37,7 @@ class Text extends Component
     use SizeAttribute;
 
     /**
-     * The specific attributes for the Search component
+     * The specific attributes for the Text component
      */
     private AttributeCollection $specificAttributes;
 
