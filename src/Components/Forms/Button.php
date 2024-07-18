@@ -57,7 +57,7 @@ class Button extends Component
      * button: The button has no default behavior, and does nothing when pressed by default. It can have client-side
      * scripts listen to the element's events, which are triggered when the events occur.
      */
-    public string $type = '';
+    public string $type = 'button';
 
     /**
      * Defines the value associated with the button's name when it's submitted with the form data. This value is
@@ -90,14 +90,12 @@ class Button extends Component
         if (! empty($this->name)) {
             $this->specificAttributes->add(['name' => $this->name]);
         }
-        if (! empty($this->type)) {
-            if (! in_array($this->type, ['submit', 'reset', 'button'])) {
-                throw new InvalidAttributeException(
-                    'The type attribute must be one of submit, reset, or button.'
-                );
-            }
-            $this->specificAttributes->add(['type' => $this->type]);
+        if (! in_array($this->type, ['submit', 'reset', 'button'])) {
+            throw new InvalidAttributeException(
+                'The type attribute must be one of submit, reset, or button.'
+            );
         }
+        $this->specificAttributes->add(['type' => $this->type]);
         if (! empty($this->value)) {
             if (empty($this->name)) {
                 throw new InvalidAttributeException(
