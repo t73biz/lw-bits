@@ -196,6 +196,9 @@ class Iframe extends Component
             }
             $this->specificAttributes->add(['sandbox' => $this->sandbox]);
         }
+        if (! empty($this->src)) {
+            $this->specificAttributes->add(['src' => $this->src]);
+        }
         if (! empty($this->srcdoc)) {
             $this->specificAttributes->add(['srcdoc' => $this->srcdoc]);
         }
