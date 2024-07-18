@@ -1,3 +1,3 @@
-<canvas {!! $globalAttributes !!}>
+<canvas {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </canvas>

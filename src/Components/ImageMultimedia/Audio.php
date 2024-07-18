@@ -10,14 +10,14 @@ use Illuminate\Support\Str;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
  * Class Audio
  */
 class Audio extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     /**
      * A Boolean attribute; if specified, the video automatically begins to play back as soon as it can without stopping
@@ -125,6 +125,8 @@ class Audio extends Component
 
     /**
      * Standard mount function
+     *
+     * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
      */
     public function mount(): void
     {

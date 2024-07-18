@@ -9,14 +9,14 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
  * Class Li
  */
 class Li extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     /**
      * This integer attribute indicates the current ordinal value of the list item as defined by the <ol> element.
@@ -33,6 +33,8 @@ class Li extends Component
 
     /**
      * Standard mount function
+     *
+     * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
      */
     public function mount(): void
     {

@@ -1,3 +1,3 @@
-<del {!! $globalAttributes !!}>
+<del {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </del>

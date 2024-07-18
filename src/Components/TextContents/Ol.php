@@ -9,14 +9,14 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
  * Class Ol
  */
 class Ol extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     public bool $reversed = false;
 
@@ -31,6 +31,8 @@ class Ol extends Component
 
     /**
      * Standard mount function
+     *
+     * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
      */
     public function mount(): void
     {

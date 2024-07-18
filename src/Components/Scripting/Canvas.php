@@ -8,21 +8,33 @@ use Illuminate\Contracts\View\View as ContractedView;
 use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use Livewire\Features\SupportAttributes\AttributeCollection;
+use T73biz\LwBits\Components\AttributeTraits\DimensionalAttributes;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
  * Class Canvas
  */
 class Canvas extends Component
 {
-    use GlobalAttributesTrait;
+    use DimensionalAttributes;
+    use GlobalAttributes;
+
+    /**
+     * The specific attributes for the embed component
+     */
+    private AttributeCollection $specificAttributes;
 
     /**
      * Standard mount function
+     *
+     * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
      */
     public function mount(): void
     {
         $this->setGlobalAttributes();
+        $this->specificAttributes = new AttributeCollection();
+        $this->setDimensionalAttributes($this->specificAttributes);
     }
 
     /**
@@ -34,6 +46,7 @@ class Canvas extends Component
             'lw-bits::scripting.canvas',
             [
                 'globalAttributes' => $this->getGlobalAttributes(),
+                'specificAttributes' => $this->parseAttributes($this->specificAttributes),
                 'slot' => '',
             ]
         );

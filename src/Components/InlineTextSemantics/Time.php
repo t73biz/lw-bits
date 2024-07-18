@@ -2,6 +2,7 @@
 
 namespace T73biz\LwBits\Components\InlineTextSemantics;
 
+use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application as ContractedApplication;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View as ContractedView;
@@ -9,31 +10,36 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
  * Class Time
  */
 class Time extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
+    /**
+     * The specific attributes for the time component
+     */
     private AttributeCollection $specificAttributes;
 
     /**
      * A valid date string
      */
-    public string $dateTime = '';
+    public ?Carbon $dateTime = null;
 
     /**
      * Standard mount function
+     *
+     * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
      */
     public function mount(): void
     {
         $this->setGlobalAttributes();
         $this->specificAttributes = new AttributeCollection();
-        if (! empty($this->dateTime)) {
-            $this->specificAttributes->add(['datetime' => $this->dateTime]);
+        if (is_a($this->dateTime, Carbon::class)) {
+            $this->specificAttributes->add(['datetime' => $this->dateTime->toDateTimeLocalString()]);
         }
     }
 

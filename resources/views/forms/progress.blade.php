@@ -1,3 +1,3 @@
-<progress {!! $globalAttributes !!}>
+<progress {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </progress>

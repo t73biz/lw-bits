@@ -1,3 +1,3 @@
-<portal {!! $globalAttributes !!}>
+<portal {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </portal>

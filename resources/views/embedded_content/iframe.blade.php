@@ -1,3 +1,3 @@
-<iframe {!! $globalAttributes !!}>
+<iframe {!! $globalAttributes !!} {!! $specificAttributes !!}>
     {{ $slot }}
 </iframe>

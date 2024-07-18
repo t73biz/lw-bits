@@ -9,14 +9,14 @@ use Illuminate\Foundation\Application;
 use Illuminate\View\View;
 use Livewire\Component;
 use Livewire\Features\SupportAttributes\AttributeCollection;
-use T73biz\LwBits\Components\GlobalAttributesTrait;
+use T73biz\LwBits\Components\AttributeTraits\GlobalAttributes;
 
 /**
  * Class Meta
  */
 class Meta extends Component
 {
-    use GlobalAttributesTrait;
+    use GlobalAttributes;
 
     /**
      * This attribute declares the document's character encoding. If the attribute is present, its value must be an
@@ -58,6 +58,8 @@ class Meta extends Component
 
     /**
      * Standard mount function
+     *
+     * @throws \T73biz\LwBits\Exceptions\InvalidAttributeException
      */
     public function mount(): void
     {
@@ -83,7 +85,7 @@ class Meta extends Component
     public function render(): Application|ContractedApplication|ContractedView|Factory|View
     {
         return view(
-            'lw-bits::text_contents.div',
+            'lw-bits::document_metadata.meta',
             [
                 'globalAttributes' => $this->getGlobalAttributes(),
                 'specificAttributes' => $this->parseAttributes($this->specificAttributes),
